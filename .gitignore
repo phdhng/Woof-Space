@@ -1,0 +1,8 @@
+.DS_Store
+/.agents/
+.claude/.cc-writes/
+.claude/agents
+.claude/skills
+.claude/commands
+epics/*/repos/*
+!epics/*/repos/README.md

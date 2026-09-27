@@ -1,0 +1,3868 @@
+[
+  {
+    "quiz_id": 6371,
+    "question_id": 22931,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "Thursday",
+        "The play was written to celebrate an anniversary."
+      ],
+      "answer_sentence_value": "On Thursday, we're seeing a play that was first performed last year when it was commissioned to mark a 100 since the birth in the town of a well known scientist.",
+      "predicted_paragraph_range": [
+        331.49002,
+        373.21503
+      ],
+      "true_range": [
+        331.49002,
+        348.695
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 18060,
+        "correct_answer_0": "On Thursday, we're seeing a play that was first performed last year",
+        "true_range": [
+          331.49002,
+          342.935
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 18061,
+        "correct_answer_0": "when it was commissioned to mark a 100 since the birth in the town of a well known scientist.",
+        "true_range": [
+          331.49002,
+          342.935
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 18062,
+        "correct_answer_0": "We're going to see a revival of that production, which aroused a lot of interest.",
+        "true_range": [
+          343.655,
+          348.695
+        ],
+        "predicted_range": [
+          343.655,
+          348.695
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        331.49002,
+        373.21503
+      ],
+      "true_range": [
+        331.49002,
+        348.695
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 6372,
+    "question_id": 22976,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "names"
+      ],
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 17493,
+        "correct_answer_0": "So, basically, the problem we're addressing in our case study of the Horton Castle site is why so few tourists are visit",
+        "true_range": [
+          312.89502,
+          322.75
+        ],
+        "predicted_range": [
+          312.89502,
+          322.75
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 17494,
+        "correct_answer_0": "And we'll find out more from our interviews, but I did find one report on the Internet that suggested that one reason mi",
+        "true_range": [
+          323.15,
+          334.92502
+        ],
+        "predicted_range": [
+          323.15,
+          334.92502
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 17495,
+        "correct_answer_0": "I read that too, but that report was actually written ten years ago when the road there was really bad, but that's been ",
+        "true_range": [
+          335.005,
+          345.00998
+        ],
+        "predicted_range": [
+          335.005,
+          345.00998
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 17496,
+        "correct_answer_0": "And I think there's plenty of fascinating stuff there for a really good day out, but you'd never realize it from the cas",
+        "true_range": [
+          345.81,
+          354.37
+        ],
+        "predicted_range": [
+          345.81,
+          354.37
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 17497,
+        "correct_answer_0": "Yes. It's really dry and boring.",
+        "true_range": [
+          357.155,
+          359.475
+        ],
+        "predicted_range": [
+          92.105,
+          359.475
+        ],
+        "verdict": "LOOKUP_MISMATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    }
+  },
+  {
+    "quiz_id": 6376,
+    "question_id": 23134,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "beetroot",
+        "The colour may be unexpected."
+      ],
+      "answer_sentence_value": "When I chop up beetroot to eat, I always end up with bright red hands, but the wool ended up just a sort of watery cream shade.",
+      "predicted_paragraph_range": [
+        247.44,
+        260.07498
+      ],
+      "true_range": [
+        248.72,
+        260.07498
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 16211,
+        "correct_answer_0": "I used beetroot as a dye for wool.",
+        "true_range": [
+          248.72,
+          251.2
+        ],
+        "predicted_range": [
+          248.72,
+          251.2
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 16212,
+        "correct_answer_0": "When I chop up beetroot to eat, I always end up with bright red hands,",
+        "true_range": [
+          251.675,
+          259.275
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 16213,
+        "correct_answer_0": "but the wool ended up just a sort of watery cream shade.",
+        "true_range": [
+          251.675,
+          259.275
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 16214,
+        "correct_answer_0": "Disappointing.",
+        "true_range": [
+          259.275,
+          260.07498
+        ],
+        "predicted_range": [
+          259.275,
+          260.07498
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        247.44,
+        260.07498
+      ],
+      "true_range": [
+        248.72,
+        260.07498
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 6379,
+    "question_id": 23198,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "Archaeologists sometimes identify the use of ancient pottery from",
+        "the marks that are on it."
+      ],
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 4323,
+        "correct_answer_0": "The shape of an artefact may have been lost, but archaeologists can tell whether the pots were for, say, storage or cook",
+        "true_range": [
+          135.97,
+          156.43501
+        ],
+        "predicted_range": [
+          135.97,
+          156.43501
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 4327,
+        "correct_answer_0": "And the clay itself can reveal where the pots came from.",
+        "true_range": [
+          135.97,
+          156.43501
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        136.17,
+        156.63501
+      ],
+      "true_range": [
+        135.97,
+        156.43501
+      ],
+      "verdict": "LOCATE_INFO_OK"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    }
+  },
+  {
+    "quiz_id": 6385,
+    "question_id": 23438,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "colour"
+      ],
+      "answer_sentence_value": "You could use food colouring, that wouldn't hurt them.",
+      "predicted_paragraph_range": [
+        334.35498,
+        337.315
+      ],
+      "true_range": [
+        364.455,
+        388.685
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 6312,
+        "correct_answer_0": "Then you'd need to weigh the mice, I should think once a week.",
+        "true_range": [
+          364.455,
+          372.0
+        ],
+        "predicted_range": [
+          364.455,
+          372.0
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 6313,
+        "correct_answer_0": "you'd need an electronic balance.",
+        "true_range": [
+          364.455,
+          372.0
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 6314,
+        "correct_answer_0": "But we can't hold them on the balance, or it'd affect the reading.",
+        "true_range": [
+          372.24,
+          376.16
+        ],
+        "predicted_range": [
+          372.24,
+          376.16
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 6315,
+        "correct_answer_0": "So you need something called a weighing chamber to stop the mice from running away.",
+        "true_range": [
+          377.52,
+          382.0
+        ],
+        "predicted_range": [
+          377.52,
+          382.0
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 6316,
+        "correct_answer_0": "It sounds complicated, but actually you can just use a plastic box with holes in the top.",
+        "true_range": [
+          382.60498,
+          388.685
+        ],
+        "predicted_range": [
+          382.60498,
+          388.685
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        334.35498,
+        337.315
+      ],
+      "true_range": [
+        364.455,
+        388.685
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 6493,
+    "question_id": 23058,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "types"
+      ],
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 16819,
+        "correct_answer_0": "I thought we could look at seed germination, how a seed begins to grow.",
+        "true_range": [
+          76.595,
+          81.6
+        ],
+        "predicted_range": [
+          76.595,
+          81.6
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 16820,
+        "correct_answer_0": "Any particular reason?",
+        "true_range": [
+          83.12,
+          84.72
+        ],
+        "predicted_range": [
+          83.12,
+          84.72
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 16821,
+        "correct_answer_0": "I know you're hoping to work in plant science eventually.",
+        "true_range": [
+          85.04,
+          88.32
+        ],
+        "predicted_range": [
+          85.04,
+          88.32
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 16822,
+        "correct_answer_0": "Yeah. But practically everything we do is going to feed into that.",
+        "true_range": [
+          88.88,
+          92.479996
+        ],
+        "predicted_range": [
+          88.4,
+          92.479996
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 16823,
+        "correct_answer_0": "No. There's an optional module on seed structure and function in the third year that I might do.",
+        "true_range": [
+          93.685,
+          99.525
+        ],
+        "predicted_range": [
+          93.685,
+          99.525
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 16824,
+        "correct_answer_0": "So I thought it might be useful for that.",
+        "true_range": [
+          100.005,
+          102.885
+        ],
+        "predicted_range": [
+          100.005,
+          102.885
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    }
+  },
+  {
+    "quiz_id": 6526,
+    "question_id": 23544,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "Flexible working",
+        "There are some restrictions."
+      ],
+      "answer_sentence_value": "Some of you have already asked me about flexible working.",
+      "predicted_paragraph_range": [
+        234.19,
+        275.05502
+      ],
+      "true_range": [
+        234.19,
+        255.49
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 15500,
+        "correct_answer_0": "Some of you have already asked me about flexible working.",
+        "true_range": [
+          234.19,
+          237.63
+        ],
+        "predicted_range": [
+          234.19,
+          237.63
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 15501,
+        "correct_answer_0": "After your probationary three month period, some of you will be eligible for this,",
+        "true_range": [
+          238.39499,
+          255.49
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 15502,
+        "correct_answer_0": "but it will depend on which department you're in and what your personal circumstances are,",
+        "true_range": [
+          238.39499,
+          255.49
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 15503,
+        "correct_answer_0": "so please don't assume you'll automatically be permitted to do this.",
+        "true_range": [
+          238.39499,
+          255.49
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        234.19,
+        275.05502
+      ],
+      "true_range": [
+        234.19,
+        255.49
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 6526,
+    "question_id": 23555,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "Geographical factors",
+        "use visuals"
+      ],
+      "answer_sentence_value": "We should mention some geographical factors, things like wetlands and river estuaries and coastal erosion and so on.",
+      "predicted_paragraph_range": [
+        300.38498,
+        314.75
+      ],
+      "true_range": [
+        301.50497,
+        320.19
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 15278,
+        "correct_answer_0": "We should mention some geographical factors, things like wetlands and river estuaries and coastal erosion and so on.",
+        "true_range": [
+          301.50497,
+          309.745
+        ],
+        "predicted_range": [
+          301.50497,
+          309.745
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 15279,
+        "correct_answer_0": "We could have some maps of different cities with these features marked.",
+        "true_range": [
+          310.34998,
+          314.75
+        ],
+        "predicted_range": [
+          310.34998,
+          314.75
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 15280,
+        "correct_answer_0": "On a handout, you mean, or some slides everyone can see?",
+        "true_range": [
+          314.83,
+          318.50998
+        ],
+        "predicted_range": [
+          314.83,
+          318.50998
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 15281,
+        "correct_answer_0": "Yeah. That'd be better.",
+        "true_range": [
+          319.06998,
+          320.19
+        ],
+        "predicted_range": [
+          97.225006,
+          320.19
+        ],
+        "verdict": "LOOKUP_MISMATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        300.38498,
+        314.75
+      ],
+      "true_range": [
+        301.50497,
+        320.19
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 6526,
+    "question_id": 23557,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "Future risk",
+        "do online research"
+      ],
+      "answer_sentence_value": "Maybe something on future risks, looking more at the long term if populations continue to grow?",
+      "predicted_paragraph_range": [
+        350.94998,
+        360.245
+      ],
+      "true_range": [
+        354.565,
+        370.43002
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 15304,
+        "correct_answer_0": "Maybe something on future risks, looking more at the long term if populations continue to grow?",
+        "true_range": [
+          354.565,
+          360.245
+        ],
+        "predicted_range": [
+          354.565,
+          360.245
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 15305,
+        "correct_answer_0": "Yeah. We'll need to do a bit of work there. I haven't got much information, have you?",
+        "true_range": [
+          360.245,
+          366.245
+        ],
+        "predicted_range": [
+          97.225006,
+          366.245
+        ],
+        "verdict": "LOOKUP_MISMATCH"
+      },
+      {
+        "practice_question_id": 15306,
+        "correct_answer_0": "No. We'll need to look at some websites. Shouldn't take too long.",
+        "true_range": [
+          366.67,
+          370.43002
+        ],
+        "predicted_range": [
+          367.23,
+          370.43002
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        350.94998,
+        360.245
+      ],
+      "true_range": [
+        354.565,
+        370.43002
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 6527,
+    "question_id": 23584,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "Starting point for walking the walls",
+        "H"
+      ],
+      "resolved_via": "paragraph_ranges",
+      "answer_sentence_value": "The starting point's quite near the main entrance.",
+      "predicted_paragraph_range": [
+        318.325,
+        321.045
+      ],
+      "true_range": [
+        291.985,
+        312.80002
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 15321,
+        "correct_answer_0": "Now if you can take a look at your plans, you'll see Branley Castle has four towers joined together by a high wall with ",
+        "true_range": [
+          291.985,
+          302.385
+        ],
+        "predicted_range": [
+          291.985,
+          302.385
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 15322,
+        "correct_answer_0": "Don't miss seeing the Great Hall.",
+        "true_range": [
+          303.36002,
+          305.60004
+        ],
+        "predicted_range": [
+          303.36002,
+          305.60004
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 15323,
+        "correct_answer_0": "That's near the river in the main tower, the biggest one",
+        "true_range": [
+          305.68002,
+          312.80002
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 15324,
+        "correct_answer_0": "which was extended and redesigned in the eighteenth century.",
+        "true_range": [
+          305.68002,
+          312.80002
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    }
+  },
+  {
+    "quiz_id": 6530,
+    "question_id": 23705,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "The eldest child",
+        "caring"
+      ],
+      "answer_sentence_value": "Performances in intelligence tests declined slightly from the eldest child to his or her younger siblings.",
+      "predicted_paragraph_range": [
+        283.69,
+        301.545
+      ],
+      "true_range": [
+        291.625,
+        351.57
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 14176,
+        "correct_answer_0": "Performances in intelligence tests declined slightly from the eldest child to his or her younger siblings.",
+        "true_range": [
+          291.625,
+          298.505
+        ],
+        "predicted_range": [
+          291.625,
+          298.505
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 14177,
+        "correct_answer_0": "Although what many of them didn't take into consideration was family size.",
+        "true_range": [
+          302.185,
+          306.505
+        ],
+        "predicted_range": [
+          302.185,
+          306.505
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 14178,
+        "correct_answer_0": "The more siblings there are, the likelier the family is to have a low socioeconomic status, which can also account for d",
+        "true_range": [
+          307.18,
+          317.5
+        ],
+        "predicted_range": [
+          307.18,
+          317.5
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 14179,
+        "correct_answer_0": "The oldest boy might be given more opportunities than his younger sisters, for example.",
+        "true_range": [
+          317.74,
+          322.3
+        ],
+        "predicted_range": [
+          317.74,
+          322.3
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 14180,
+        "correct_answer_0": "But the main reason for the marginally higher academic performance of oldest children is quite surprising, I think.",
+        "true_range": [
+          323.445,
+          330.565
+        ],
+        "predicted_range": [
+          323.445,
+          330.565
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 14181,
+        "correct_answer_0": "It's not only that they benefit intellectually from extra attention at a young age, which is what I would have expected.",
+        "true_range": [
+          330.965,
+          337.89
+        ],
+        "predicted_range": [
+          330.965,
+          337.89
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 14182,
+        "correct_answer_0": "It's that they benefit from being teachers for their younger siblings by verbalizing processes.",
+        "true_range": [
+          338.53,
+          343.73
+        ],
+        "predicted_range": [
+          338.53,
+          343.73
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 14183,
+        "correct_answer_0": "Right. And this gives them status and confidence, which again contributes in a small way to better performance.",
+        "true_range": [
+          344.69,
+          351.57
+        ],
+        "predicted_range": [
+          344.69,
+          351.57
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        283.69,
+        301.545
+      ],
+      "true_range": [
+        291.625,
+        351.57
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 6530,
+    "question_id": 23707,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "The youngest child",
+        "outgoing"
+      ],
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 14209,
+        "correct_answer_0": "As I said, none of this seems to relate to my own experience.",
+        "true_range": [
+          142.22,
+          146.06001
+        ],
+        "predicted_range": [
+          142.22,
+          146.06001
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 14210,
+        "correct_answer_0": "I'm the youngest in my family, and I don't recognize myself in any of the studies I've read about.",
+        "true_range": [
+          146.3,
+          151.18
+        ],
+        "predicted_range": [
+          146.3,
+          151.18
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 14211,
+        "correct_answer_0": "I'm supposed to have been a sociable and confident child who made friends easily,",
+        "true_range": [
+          151.85501,
+          160.01501
+        ],
+        "predicted_range": [
+          151.85501,
+          160.01501
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 14212,
+        "correct_answer_0": "but I was actually terribly shy.",
+        "true_range": [
+          151.85501,
+          160.01501
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    }
+  },
+  {
+    "quiz_id": 7046,
+    "question_id": 24324,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "The Amesbury",
+        "improving relationships and teamwork"
+      ],
+      "answer_sentence_value": "SPEAKER: Louise Marsh at The Amesbury has one of the best staff retention rates in the business.",
+      "predicted_paragraph_range": [
+        409.025,
+        428.98
+      ],
+      "true_range": [
+        409.025,
+        428.98
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 7103,
+        "correct_answer_0": "Louise Marsh at The Amesbury has one of the best staff retention rates in the business.",
+        "true_range": [
+          409.025,
+          414.625
+        ],
+        "predicted_range": [
+          409.025,
+          414.625
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 7104,
+        "correct_answer_0": "Since she joined the company, she has made a huge effort to achieve this by creating a co-operative and supportive envir",
+        "true_range": [
+          415.54,
+          417.46002
+        ],
+        "predicted_range": [
+          415.54,
+          417.46002
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 7105,
+        "correct_answer_0": "For her, the staff are part of a large family where everyone is valued.",
+        "true_range": [
+          424.18002,
+          428.98
+        ],
+        "predicted_range": [
+          424.18002,
+          428.98
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        409.025,
+        428.98
+      ],
+      "true_range": [
+        409.025,
+        428.98
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 7046,
+    "question_id": 24328,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "The cricket helmet",
+        "It was unpopular among spectators."
+      ],
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 7172,
+        "correct_answer_0": "So what about cricket -- that's had a few innovative changes.",
+        "true_range": [
+          230.46,
+          234.86002
+        ],
+        "predicted_range": [
+          232.78,
+          234.86002
+        ],
+        "verdict": "LOOKUP_MISMATCH"
+      },
+      {
+        "practice_question_id": 7173,
+        "correct_answer_0": "Maybe the pads they wear on their legs?",
+        "true_range": [
+          235.5,
+          237.98001
+        ],
+        "predicted_range": [
+          235.5,
+          237.98001
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 7174,
+        "correct_answer_0": "I don't think they've changed much but, I'm just looking on the internet ...",
+        "true_range": [
+          238.335,
+          241.77501
+        ],
+        "predicted_range": [
+          238.335,
+          241.77501
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 7175,
+        "correct_answer_0": "and it says that when the first cricket helmet came in, in 1978, the Australian batsman who first wore it was booed and ",
+        "true_range": [
+          242.815,
+          255.0
+        ],
+        "predicted_range": [
+          242.815,
+          255.0
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 7176,
+        "correct_answer_0": "Wow, players have to protect themselves from getting hurt!",
+        "true_range": [
+          256.68,
+          259.64
+        ],
+        "predicted_range": [
+          256.68,
+          259.64
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 7177,
+        "correct_answer_0": "I mean everyone wears one now.",
+        "true_range": [
+          260.04,
+          262.12003
+        ],
+        "predicted_range": [
+          260.04,
+          262.12003
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        242.0,
+        255.0
+      ],
+      "true_range": [
+        230.46,
+        262.12003
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    }
+  },
+  {
+    "quiz_id": 7396,
+    "question_id": 23399,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "the ankle boots",
+        "the colour of one shoe had faded"
+      ],
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 5929,
+        "correct_answer_0": "OK ... and the leather ankle boots. What was wrong with them?",
+        "true_range": [
+          260.245,
+          265.445
+        ],
+        "predicted_range": [
+          260.245,
+          265.445
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 5930,
+        "correct_answer_0": "Apparently, the heels were worn - but that wasn't the problem.",
+        "true_range": [
+          265.765,
+          270.325
+        ],
+        "predicted_range": [
+          265.765,
+          270.325
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 5931,
+        "correct_answer_0": "One of the shoes was a much lighter shade than the other one - it had obviously been left in the sun.",
+        "true_range": [
+          270.885,
+          276.79
+        ],
+        "predicted_range": [
+          270.885,
+          276.79
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 5932,
+        "correct_answer_0": "I suppose even second-hand shoes should look the same!",
+        "true_range": [
+          277.19,
+          278.15
+        ],
+        "predicted_range": [
+          277.19,
+          278.15
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        270.81,
+        276.79
+      ],
+      "true_range": [
+        260.245,
+        278.15
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    }
+  },
+  {
+    "quiz_id": 7473,
+    "question_id": 23584,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "Starting point for walking the walls",
+        "H"
+      ],
+      "resolved_via": "paragraph_ranges",
+      "answer_sentence_value": "The starting point's quite near the main entrance.",
+      "predicted_paragraph_range": [
+        318.325,
+        321.045
+      ],
+      "true_range": [
+        291.985,
+        312.80002
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 15321,
+        "correct_answer_0": "Now if you can take a look at your plans, you'll see Branley Castle has four towers joined together by a high wall with ",
+        "true_range": [
+          291.985,
+          302.385
+        ],
+        "predicted_range": [
+          291.985,
+          302.385
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 15322,
+        "correct_answer_0": "Don't miss seeing the Great Hall.",
+        "true_range": [
+          303.36002,
+          305.60004
+        ],
+        "predicted_range": [
+          303.36002,
+          305.60004
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 15323,
+        "correct_answer_0": "That's near the river in the main tower, the biggest one",
+        "true_range": [
+          305.68002,
+          312.80002
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 15324,
+        "correct_answer_0": "which was extended and redesigned in the eighteenth century.",
+        "true_range": [
+          305.68002,
+          312.80002
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    }
+  },
+  {
+    "quiz_id": 8451,
+    "question_id": 34318,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "07958847222"
+      ],
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 37874,
+        "correct_answer_0": "Travel Agent: And can I take a contact phone number?",
+        "true_range": [
+          169.27,
+          171.51
+        ],
+        "predicted_range": [
+          169.27,
+          171.51
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 37875,
+        "correct_answer_0": "Sarah Carter: 07 958 847 222.",
+        "true_range": [
+          172.23,
+          177.54
+        ],
+        "predicted_range": [
+          172.23,
+          177.54
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        172.23,
+        177.54
+      ],
+      "true_range": [
+        169.27,
+        177.54
+      ],
+      "verdict": "LOCATE_INFO_OK"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    }
+  },
+  {
+    "quiz_id": 8451,
+    "question_id": 34322,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "wedding"
+      ],
+      "answer_sentence_value": "Sarah Carter: We’re going to a wedding.",
+      "predicted_paragraph_range": [
+        229.43,
+        232.23
+      ],
+      "true_range": [
+        229.43,
+        232.23
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 37904,
+        "correct_answer_0": "Sarah Carter: We’re going to a wedding.",
+        "true_range": [
+          229.43,
+          230.87
+        ],
+        "predicted_range": [
+          229.43,
+          230.87
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 37905,
+        "correct_answer_0": "We’re not going for a holiday.",
+        "true_range": [
+          230.87,
+          232.23
+        ],
+        "predicted_range": [
+          230.87,
+          232.23
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        229.43,
+        230.87
+      ],
+      "true_range": [
+        229.43,
+        232.23
+      ],
+      "verdict": "LOCATE_INFO_OK"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        229.43,
+        232.23
+      ],
+      "true_range": [
+        229.43,
+        232.23
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 8541,
+    "question_id": 35202,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "Cook Islands",
+        "spiritual"
+      ],
+      "answer_sentence_value": "Now, what about Cook Islands tapa?",
+      "predicted_paragraph_range": [
+        310.03,
+        313.87
+      ],
+      "true_range": [
+        311.23,
+        331.24
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 26063,
+        "correct_answer_0": "Good point. Now, what about Cook Islands tapa?",
+        "true_range": [
+          311.23,
+          313.87
+        ],
+        "predicted_range": [
+          310.03,
+          313.87
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 26064,
+        "correct_answer_0": "Well, the soil there is poor quality, so the breadfruit tree is often used.",
+        "true_range": [
+          314.43,
+          320.07
+        ],
+        "predicted_range": [
+          314.43,
+          320.07
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 26065,
+        "correct_answer_0": "One type of thick cloth called Tikuru was wrapped around the poles and used to mark the entrances to places of worship.",
+        "true_range": [
+          320.38,
+          328.9
+        ],
+        "predicted_range": [
+          320.38,
+          328.9
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 26066,
+        "correct_answer_0": "So it was highly regarded in local culture.",
+        "true_range": [
+          328.9,
+          331.24
+        ],
+        "predicted_range": [
+          328.9,
+          331.24
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        320.38,
+        328.9
+      ],
+      "true_range": [
+        311.23,
+        331.24
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        310.03,
+        313.87
+      ],
+      "true_range": [
+        311.23,
+        331.24
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 8705,
+    "question_id": 36442,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "Which THREE kinds of help did both Tim and Alice get from their mentor?",
+        "building up confidence",
+        "preparation for exams",
+        "course selection"
+      ],
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 24840,
+        "correct_answer_0": "I admit, I wasn't particularly confident before starting this course.",
+        "true_range": [
+          65.33,
+          68.93
+        ],
+        "predicted_range": [
+          65.33,
+          68.93
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 24841,
+        "correct_answer_0": "But with help from mister Jarvis, I'm growing in self confidence and ability every day.",
+        "true_range": [
+          74.59,
+          79.23
+        ],
+        "predicted_range": [
+          74.59,
+          79.23
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 24842,
+        "correct_answer_0": "Yeah, I improved a lot.",
+        "true_range": [
+          82.89,
+          84.73
+        ],
+        "predicted_range": [
+          82.89,
+          84.73
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 24845,
+        "correct_answer_0": "And I would like some advice on how to prepare for our seminars.",
+        "true_range": [
+          91.69,
+          95.13
+        ],
+        "predicted_range": [
+          91.69,
+          95.13
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 24848,
+        "correct_answer_0": "I'm focusing on passing my exams at the moment.",
+        "true_range": [
+          97.13,
+          99.94
+        ],
+        "predicted_range": [
+          97.13,
+          99.94
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 24849,
+        "correct_answer_0": "Mr. Jarvis has been coaching me in this respect.",
+        "true_range": [
+          100.17,
+          102.89
+        ],
+        "predicted_range": [
+          100.17,
+          102.89
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 24850,
+        "correct_answer_0": "I'm grateful for his help in this respect too.",
+        "true_range": [
+          104.97,
+          107.3
+        ],
+        "predicted_range": [
+          104.97,
+          107.3
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 24853,
+        "correct_answer_0": "I would like him to be able to give us more information on other subjects.",
+        "true_range": [
+          84.81,
+          88.33
+        ],
+        "predicted_range": [
+          84.81,
+          88.33
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 24854,
+        "correct_answer_0": "However, he does give a very narrow view of economics.",
+        "true_range": [
+          88.33,
+          91.61
+        ],
+        "predicted_range": [
+          88.33,
+          91.61
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 24857,
+        "correct_answer_0": "Not regarding my career.",
+        "true_range": [
+          124.48,
+          126.33
+        ],
+        "predicted_range": [
+          124.48,
+          126.33
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 24858,
+        "correct_answer_0": "I did discuss with him some options for next semester, which course I might choose.",
+        "true_range": [
+          126.56,
+          131.05
+        ],
+        "predicted_range": [
+          126.56,
+          131.05
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 24859,
+        "correct_answer_0": "He suggested that I should continue studying in this field for now.",
+        "true_range": [
+          133.14,
+          136.82
+        ],
+        "predicted_range": [
+          133.14,
+          136.82
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 24863,
+        "correct_answer_0": "I wonder if he might help me with the experiments I need to conduct.",
+        "true_range": [
+          136.98,
+          140.42
+        ],
+        "predicted_range": [
+          136.98,
+          140.42
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 24864,
+        "correct_answer_0": "I should ask him.",
+        "true_range": [
+          140.58,
+          141.62
+        ],
+        "predicted_range": [
+          140.58,
+          141.62
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    }
+  },
+  {
+    "quiz_id": 8811,
+    "question_id": 37336,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "Asia",
+        "local animals"
+      ],
+      "answer_sentence_value": "For example, there is a section on Asia, and this is represented by rides and equipment in the shape of snakes, orangutans, tigers and so on, fauna native to the forests of the region.",
+      "predicted_paragraph_range": [
+        205.46,
+        311.96
+      ],
+      "true_range": [
+        227.31,
+        238.43
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 33907,
+        "correct_answer_0": "For example, there is a section on Asia,",
+        "true_range": [
+          227.31,
+          238.43
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 33908,
+        "correct_answer_0": "and this is represented by rides and equipment in the shape of snakes, orangutans, tigers and so on,",
+        "true_range": [
+          227.31,
+          238.43
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 33909,
+        "correct_answer_0": "fauna native to the forests of the region.",
+        "true_range": [
+          227.31,
+          238.43
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        227.31,
+        238.43
+      ],
+      "true_range": [
+        227.31,
+        238.43
+      ],
+      "verdict": "LOCATE_INFO_OK"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        205.46,
+        311.96
+      ],
+      "true_range": [
+        227.31,
+        238.43
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 9965,
+    "question_id": 41681,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "club"
+      ],
+      "answer_sentence_value": "Society Representative: I’m afraid that the club is for adults only.",
+      "predicted_paragraph_range": [
+        346.88,
+        356.4
+      ],
+      "true_range": [
+        346.88,
+        353.51
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 33611,
+        "correct_answer_0": "Society Representative: I’m afraid that the club is for adults only.",
+        "true_range": [
+          346.88,
+          349.51
+        ],
+        "predicted_range": [
+          346.88,
+          349.51
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 33612,
+        "correct_answer_0": "That is to say, we don’t allow members who are aged 16 and under.",
+        "true_range": [
+          349.68,
+          353.51
+        ],
+        "predicted_range": [
+          349.68,
+          353.51
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        126.15,
+        128.47
+      ],
+      "true_range": [
+        346.88,
+        353.51
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        111.72,
+        122.84
+      ],
+      "true_range": [
+        346.88,
+        353.51
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 9965,
+    "question_id": 41683,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "drive"
+      ],
+      "answer_sentence_value": "Potential Member: I don’t drive, but I’d be happy to contribute some money in order to use the shuttle services.",
+      "predicted_paragraph_range": [
+        181.17,
+        186.13
+      ],
+      "true_range": [
+        181.17,
+        186.13
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 33626,
+        "correct_answer_0": "Potential Member: I don’t drive, but I’d be happy to contribute some money in order to use the shuttle services.",
+        "true_range": [
+          181.17,
+          186.13
+        ],
+        "predicted_range": [
+          181.17,
+          186.13
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        169.7,
+        174.58
+      ],
+      "true_range": [
+        181.17,
+        186.13
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        162.26,
+        180.26
+      ],
+      "true_range": [
+        181.17,
+        186.13
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 10246,
+    "question_id": 44339,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "green",
+        "the green one"
+      ],
+      "answer_sentence_value": "The green one is a double-decker which offers a nicer view.",
+      "predicted_paragraph_range": null,
+      "true_range": null,
+      "verdict": "NO_TRUE_RANGE_TO_COMPARE"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 32417,
+        "correct_answer_0": "Receptionist: Well, if you want to enjoy the scenery, then the blue city bus is recommended.",
+        "true_range": null,
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 32418,
+        "correct_answer_0": "Ah, that one is a business route mainly for commuters.",
+        "true_range": null,
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 32419,
+        "correct_answer_0": "The green one is a double-decker which offers a nicer view.",
+        "true_range": null,
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        281.0,
+        284.0
+      ],
+      "true_range": null,
+      "verdict": "NO_TRUE_RANGE_TO_COMPARE"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": null,
+      "true_range": null,
+      "verdict": "NO_TRUE_RANGE_TO_COMPARE"
+    }
+  },
+  {
+    "quiz_id": 10494,
+    "question_id": 45351,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "salts"
+      ],
+      "answer_sentence_value": "Unfortunately, bore water may be dangerous to drink because it contains excessive amounts of salts.",
+      "predicted_paragraph_range": null,
+      "true_range": null,
+      "verdict": "NO_TRUE_RANGE_TO_COMPARE"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 29693,
+        "correct_answer_0": "In some developing areas, bore water, which is water that comes out of the ground, is the only water available.",
+        "true_range": null,
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 29694,
+        "correct_answer_0": "Unfortunately, bore water may be dangerous to drink because it contains excessive amounts of salts.",
+        "true_range": null,
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        39.0,
+        46.0
+      ],
+      "true_range": null,
+      "verdict": "NO_TRUE_RANGE_TO_COMPARE"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": null,
+      "true_range": null,
+      "verdict": "NO_TRUE_RANGE_TO_COMPARE"
+    }
+  },
+  {
+    "quiz_id": 10757,
+    "question_id": 45897,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "They have recently won a competition",
+        "The Black Bell Male Voice Choir"
+      ],
+      "answer_sentence_value": "Well, feeling a bit apprehensive about my ability to sing in tune, I recently headed off for rehearsals at the town's three biggest choirs, Mitchell's Town Choir, the Black Bell Male Voice Choir, and the Caroline Singers.",
+      "predicted_paragraph_range": [
+        31.7,
+        47.98
+      ],
+      "true_range": [
+        106.33,
+        125.71
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 29164,
+        "correct_answer_0": "You could win a gold medal too.",
+        "true_range": [
+          106.33,
+          108.72
+        ],
+        "predicted_range": [
+          106.33,
+          108.72
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 29165,
+        "correct_answer_0": "Mitchellstown are hoping to get to the final at the Melody Competition in Atlanta,",
+        "true_range": [
+          109.28,
+          125.71
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 29166,
+        "correct_answer_0": "and Black Bell are the current holders of the Countermail Voice Choir Award, which was presented to them by the director",
+        "true_range": [
+          109.28,
+          125.71
+        ],
+        "predicted_range": [
+          109.28,
+          125.71
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        109.28,
+        125.71
+      ],
+      "true_range": [
+        106.33,
+        125.71
+      ],
+      "verdict": "LOCATE_INFO_OK"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        31.7,
+        47.98
+      ],
+      "true_range": [
+        106.33,
+        125.71
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 10757,
+    "question_id": 45899,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "They participate in charity events",
+        "The Black Bell Male Voice Choir"
+      ],
+      "answer_sentence_value": "Well, feeling a bit apprehensive about my ability to sing in tune, I recently headed off for rehearsals at the town's three biggest choirs, Mitchell's Town Choir, the Black Bell Male Voice Choir, and the Caroline Singers.",
+      "predicted_paragraph_range": [
+        31.7,
+        47.98
+      ],
+      "true_range": [
+        139.72,
+        157.99
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 29179,
+        "correct_answer_0": "And if all of that isn't enough, you can also benefit the local community by helping to raise funds for good causes.",
+        "true_range": [
+          139.72,
+          146.94
+        ],
+        "predicted_range": [
+          139.72,
+          146.94
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 29180,
+        "correct_answer_0": "Mitchellstown regularly performs its functions helping the disabled and the elderly,",
+        "true_range": [
+          147.42,
+          157.99
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 29181,
+        "correct_answer_0": "while Black Bell donates a percentage of its profits to certain local charities.",
+        "true_range": [
+          147.42,
+          157.99
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        147.42,
+        157.99
+      ],
+      "true_range": [
+        139.72,
+        157.99
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        31.7,
+        47.98
+      ],
+      "true_range": [
+        139.72,
+        157.99
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 11320,
+    "question_id": 45385,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "writing the report",
+        "They benefited from a relative's help."
+      ],
+      "answer_sentence_value": "Well, first, I'd say that writing the report was hard.",
+      "predicted_paragraph_range": [
+        321.34,
+        325.42
+      ],
+      "true_range": [
+        321.34,
+        347.65
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 29415,
+        "correct_answer_0": "Well, first, I'd say that writing the report was hard.",
+        "true_range": [
+          321.34,
+          325.42
+        ],
+        "predicted_range": [
+          321.34,
+          325.42
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 29416,
+        "correct_answer_0": "Yes. I was dreading having to write 80 pages in just a month.",
+        "true_range": [
+          326.46,
+          330.54
+        ],
+        "predicted_range": [
+          97.52,
+          330.54
+        ],
+        "verdict": "LOOKUP_MISMATCH"
+      },
+      {
+        "practice_question_id": 29417,
+        "correct_answer_0": "But actually, it was harder making sure we didn't go over length.",
+        "true_range": [
+          330.86,
+          334.86
+        ],
+        "predicted_range": [
+          330.86,
+          334.86
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 29418,
+        "correct_answer_0": "Anyway, I never imagined we'd deal with it with a day to spare.",
+        "true_range": [
+          335.09,
+          339.41
+        ],
+        "predicted_range": [
+          335.09,
+          339.41
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 29419,
+        "correct_answer_0": "No. It was lucky your sister had time to proofread it.",
+        "true_range": [
+          340.37,
+          343.49
+        ],
+        "predicted_range": [
+          340.37,
+          343.49
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 29420,
+        "correct_answer_0": "She picked up on several careless mistakes, especially in the bibliography.",
+        "true_range": [
+          343.57,
+          347.65
+        ],
+        "predicted_range": [
+          343.57,
+          347.65
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        321.34,
+        343.49
+      ],
+      "true_range": [
+        321.34,
+        347.65
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        321.34,
+        325.42
+      ],
+      "true_range": [
+        321.34,
+        347.65
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 11320,
+    "question_id": 45388,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "finding sponsors",
+        "A member of staff was surprisingly helpful."
+      ],
+      "answer_sentence_value": "Finding sponsors took quite some time, of course.",
+      "predicted_paragraph_range": [
+        403.54,
+        406.75
+      ],
+      "true_range": [
+        403.54,
+        426.71
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 29455,
+        "correct_answer_0": "Finding sponsors took quite some time, of course.",
+        "true_range": [
+          403.54,
+          406.75
+        ],
+        "predicted_range": [
+          403.54,
+          406.75
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 29456,
+        "correct_answer_0": "Yes. But we knew that'd be an issue, and I never expected it to be enjoyable.",
+        "true_range": [
+          407.54,
+          412.58
+        ],
+        "predicted_range": [
+          97.52,
+          412.58
+        ],
+        "verdict": "LOOKUP_MISMATCH"
+      },
+      {
+        "practice_question_id": 29457,
+        "correct_answer_0": "Not like the actual hands on project work.",
+        "true_range": [
+          412.99,
+          416.02
+        ],
+        "predicted_range": [
+          412.99,
+          416.02
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 29458,
+        "correct_answer_0": "The tutor certainly came into his own at that stage.",
+        "true_range": [
+          416.19,
+          418.75
+        ],
+        "predicted_range": [
+          416.19,
+          418.75
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 29459,
+        "correct_answer_0": "Yes. I never expected him to have such useful contacts in industry.",
+        "true_range": [
+          420.07,
+          424.47
+        ],
+        "predicted_range": [
+          97.52,
+          424.47
+        ],
+        "verdict": "LOOKUP_MISMATCH"
+      },
+      {
+        "practice_question_id": 29460,
+        "correct_answer_0": "Good thing for us he did though.",
+        "true_range": [
+          424.71,
+          426.71
+        ],
+        "predicted_range": [
+          424.71,
+          426.71
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        416.19,
+        426.71
+      ],
+      "true_range": [
+        403.54,
+        426.71
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        403.54,
+        406.75
+      ],
+      "true_range": [
+        403.54,
+        426.71
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 11366,
+    "question_id": 24144,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "24 April",
+        "24th April",
+        "April 24th",
+        "April 24"
+      ],
+      "answer_sentence_value": "It's the April 24, isn't it?",
+      "predicted_paragraph_range": [
+        108.535,
+        114.38
+      ],
+      "true_range": [
+        84.95,
+        119.82
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 100320,
+        "correct_answer_0": "It's the April 24, isn't it?",
+        "true_range": [
+          111.5,
+          114.38
+        ],
+        "predicted_range": [
+          111.5,
+          114.38
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 100321,
+        "correct_answer_0": "Isn't it the twenty fifth?",
+        "true_range": [
+          114.38,
+          116.46
+        ],
+        "predicted_range": [
+          114.38,
+          116.46
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 100322,
+        "correct_answer_0": "No.",
+        "true_range": [
+          84.95,
+          85.59
+        ],
+        "predicted_range": [
+          84.95,
+          85.59
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 100323,
+        "correct_answer_0": "Actually, you're right.",
+        "true_range": [
+          118.299995,
+          119.82
+        ],
+        "predicted_range": [
+          118.299995,
+          119.82
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        108.535,
+        114.38
+      ],
+      "true_range": [
+        84.95,
+        119.82
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 11397,
+    "question_id": 22823,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "grass"
+      ],
+      "answer_sentence_value": "I wasn't too happy with that one because they're supposed to be skating on grass, aren't they?",
+      "predicted_paragraph_range": [
+        185.735,
+        191.495
+      ],
+      "true_range": [
+        185.735,
+        193.335
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 12106,
+        "correct_answer_0": "I wasn't too happy with that one because they're supposed to be skating on grass, aren't they?",
+        "true_range": [
+          185.735,
+          191.495
+        ],
+        "predicted_range": [
+          185.735,
+          191.495
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 12107,
+        "correct_answer_0": "That's right. And it's frozen over.",
+        "true_range": [
+          191.495,
+          193.335
+        ],
+        "predicted_range": [
+          142.95,
+          193.335
+        ],
+        "verdict": "LOOKUP_MISMATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        185.735,
+        191.495
+      ],
+      "true_range": [
+        185.735,
+        193.335
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 11896,
+    "question_id": 54695,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "the bank",
+        "E"
+      ],
+      "resolved_via": "paragraph_ranges",
+      "answer_sentence_value": "Directly opposite us is the bank.",
+      "predicted_paragraph_range": [
+        228.62,
+        230.7
+      ],
+      "true_range": [
+        222.67,
+        276.56
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 159532,
+        "correct_answer_0": "We're here in the accommodation agency on the High Street facing north.",
+        "true_range": [
+          222.67,
+          227.66
+        ],
+        "predicted_range": [
+          222.67,
+          227.66
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 159533,
+        "correct_answer_0": "The flat is a bit of a walk, but it's in very nice surroundings.",
+        "true_range": [
+          260.49,
+          265.85
+        ],
+        "predicted_range": [
+          260.49,
+          265.85
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 159534,
+        "correct_answer_0": "you go down West Street towards the center of the city",
+        "true_range": [
+          266.25,
+          276.56
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 159535,
+        "correct_answer_0": "the building is on the corner just before the first turning on the left",
+        "true_range": [
+          266.25,
+          276.56
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        222.67,
+        230.7
+      ],
+      "true_range": [
+        222.67,
+        276.56
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        228.62,
+        230.7
+      ],
+      "true_range": [
+        222.67,
+        276.56
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 11912,
+    "question_id": 23968,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "Skateboard ramp",
+        "I"
+      ],
+      "answer_sentence_value": "The skateboard ramp is very popular with both younger and older children.",
+      "predicted_paragraph_range": [
+        273.0,
+        312.935
+      ],
+      "true_range": [
+        308.055,
+        320.29498
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 8222,
+        "correct_answer_0": "The skateboard ramp is very popular with both younger and older children",
+        "true_range": [
+          308.055,
+          312.935
+        ],
+        "predicted_range": [
+          308.055,
+          312.935
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 8223,
+        "correct_answer_0": "we had considered moving this up towards the river",
+        "true_range": [
+          313.335,
+          320.29498
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 8224,
+        "correct_answer_0": "but in the end we decided to have it in the southeast corner near the road",
+        "true_range": [
+          313.335,
+          320.29498
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        0.0,
+        0.0
+      ],
+      "true_range": [
+        308.055,
+        320.29498
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        273.0,
+        312.935
+      ],
+      "true_range": [
+        308.055,
+        320.29498
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 11912,
+    "question_id": 23969,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "Pavilion",
+        "E"
+      ],
+      "resolved_via": "paragraph_ranges",
+      "answer_sentence_value": "It will stay where it is now, to the left of the line of trees and near to the river, handy for both the football and cricket pitches.",
+      "predicted_paragraph_range": [
+        326.75998,
+        334.12
+      ],
+      "true_range": [
+        321.47998,
+        334.12
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 8226,
+        "correct_answer_0": "The pavilion is very well used at present by both football players and cricketers.",
+        "true_range": [
+          321.47998,
+          326.52
+        ],
+        "predicted_range": [
+          321.47998,
+          326.52
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 8227,
+        "correct_answer_0": "It will stay where it is now",
+        "true_range": [
+          326.75998,
+          334.12
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 8228,
+        "correct_answer_0": "to the left of the line of trees and near to the river",
+        "true_range": [
+          326.75998,
+          334.12
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 8229,
+        "correct_answer_0": "handy for both the football and cricket pitches.",
+        "true_range": [
+          326.75998,
+          334.12
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        313.335,
+        345.125
+      ],
+      "true_range": [
+        321.47998,
+        334.12
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 11914,
+    "question_id": 23011,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "The Warner Gallery",
+        "I"
+      ],
+      "resolved_via": "paragraph_ranges",
+      "answer_sentence_value": "The Warner Gallery specialises in nineteenth century art. It's on City Road, near the junction with Crawley Road, on the same side of the road as the public gardens.",
+      "predicted_paragraph_range": [
+        292.695,
+        303.33002
+      ],
+      "true_range": [
+        235.055,
+        303.33002
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 17287,
+        "correct_answer_0": "Most visitors start from Crawley Road at the bottom of the map.",
+        "true_range": [
+          235.055,
+          238.175
+        ],
+        "predicted_range": [
+          235.055,
+          238.175
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 17288,
+        "correct_answer_0": "The Warner Gallery specialises in nineteenth century art.",
+        "true_range": [
+          292.695,
+          296.215
+        ],
+        "predicted_range": [
+          292.695,
+          296.215
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 17289,
+        "correct_answer_0": "It's on City Road, near the junction with Crawley Road,",
+        "true_range": [
+          296.69,
+          303.33002
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 17290,
+        "correct_answer_0": "on the same side of the road as the public gardens.",
+        "true_range": [
+          296.69,
+          303.33002
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        292.695,
+        323.42502
+      ],
+      "true_range": [
+        235.055,
+        303.33002
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 11923,
+    "question_id": 35543,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "Which TWO points do the students most frequently make about their music practice?",
+        "they were motivated by fear",
+        "they enjoyed the challenge of playing complex pieces"
+      ],
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 25917,
+        "correct_answer_0": "All subjects mentioned that they feared being marked too low and tried their best.",
+        "true_range": [
+          188.86,
+          194.94
+        ],
+        "predicted_range": [
+          188.86,
+          194.94
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 25920,
+        "correct_answer_0": "So they were like practicing every single day?",
+        "true_range": [
+          195.58,
+          199.02
+        ],
+        "predicted_range": [
+          195.58,
+          199.02
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 25921,
+        "correct_answer_0": "Not for most people.",
+        "true_range": [
+          199.42,
+          200.7
+        ],
+        "predicted_range": [
+          199.42,
+          200.7
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 25924,
+        "correct_answer_0": "Some students worked with others in a band, so they had to arrange the time for rehearsals.",
+        "true_range": [
+          201.38,
+          208.01
+        ],
+        "predicted_range": [
+          201.38,
+          208.01
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 25927,
+        "correct_answer_0": "But all 18 students had a sufficient amount of practice, and they frequently mentioned that playing technical pieces was",
+        "true_range": [
+          208.33,
+          218.51
+        ],
+        "predicted_range": [
+          208.33,
+          218.51
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "verdict": "NO_LOCATE_INFO"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "verdict": "NO_MATCH_IN_EXTRACT"
+    }
+  },
+  {
+    "quiz_id": 12215,
+    "question_id": 33410,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "flowerpots",
+        "unchanged"
+      ],
+      "answer_sentence_value": "We keep our packaging materials to the right of the cashier area at the entrance where you would see three shelves of the same size and we place them on the one between the flowerpots shelf and the tripods shelf.",
+      "predicted_paragraph_range": [
+        274.93,
+        287.54
+      ],
+      "true_range": [
+        274.93,
+        287.54
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 42414,
+        "correct_answer_0": "We keep our packaging materials to the right of the cashier area at the entrance",
+        "true_range": [
+          274.93,
+          287.54
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 42415,
+        "correct_answer_0": "where you would see three shelves of the same size",
+        "true_range": [
+          274.93,
+          287.54
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 42416,
+        "correct_answer_0": "and we place them on the one between the flowerpots shelf and the tripods shelf.",
+        "true_range": [
+          274.93,
+          287.54
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        114.58,
+        122.26
+      ],
+      "true_range": [
+        274.93,
+        287.54
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        274.93,
+        287.54
+      ],
+      "true_range": [
+        274.93,
+        287.54
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 12378,
+    "question_id": 55607,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "playground",
+        "E"
+      ],
+      "resolved_via": "paragraph_ranges",
+      "answer_sentence_value": "Walk along, ignore the first building on your right, and the playground is a little further along on the opposite side.",
+      "predicted_paragraph_range": [
+        326.78,
+        334.165
+      ],
+      "true_range": [
+        322.54,
+        336.64502
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 165035,
+        "correct_answer_0": "Go back to the crossroads and turn onto the West path.",
+        "true_range": [
+          322.54,
+          326.38
+        ],
+        "predicted_range": [
+          322.54,
+          326.38
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 165036,
+        "correct_answer_0": "Walk along, ignore the first building on your right,",
+        "true_range": [
+          326.78,
+          334.165
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 165037,
+        "correct_answer_0": "and the playground is a little further along on the opposite side.",
+        "true_range": [
+          326.78,
+          334.165
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 165038,
+        "correct_answer_0": "There are benches there for the grown ups.",
+        "true_range": [
+          334.48502,
+          336.64502
+        ],
+        "predicted_range": [
+          334.48502,
+          336.64502
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        326.78,
+        334.165
+      ],
+      "true_range": [
+        322.54,
+        336.64502
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        309.71503,
+        326.38
+      ],
+      "true_range": [
+        322.54,
+        336.64502
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 12396,
+    "question_id": 56316,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "rot"
+      ],
+      "answer_sentence_value": "At the waterline, timber was soaked and dried, soaked and dried endlessly, and in those conditions, rot takes hold.",
+      "predicted_paragraph_range": [
+        121.615005,
+        156.74501
+      ],
+      "true_range": [
+        128.575,
+        136.81001
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 168639,
+        "correct_answer_0": "At the waterline, timber was soaked and dried, soaked and dried endlessly.",
+        "true_range": [
+          128.575,
+          136.81001
+        ],
+        "predicted_range": [
+          128.575,
+          136.81001
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 168640,
+        "correct_answer_0": "And in those conditions, rot takes hold.",
+        "true_range": [
+          128.575,
+          136.81001
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        128.575,
+        136.81001
+      ],
+      "true_range": [
+        128.575,
+        136.81001
+      ],
+      "verdict": "LOCATE_INFO_OK"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        121.615005,
+        156.74501
+      ],
+      "true_range": [
+        128.575,
+        136.81001
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 12397,
+    "question_id": 56353,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "pollen"
+      ],
+      "answer_sentence_value": "A bumblebee lands, grips the flower in its jaws, and vibrates its flight muscles at just the right frequency, and the flower answers by letting go of its pollen in a dry little burst.",
+      "predicted_paragraph_range": [
+        112.65,
+        157.785
+      ],
+      "true_range": [
+        145.46,
+        157.785
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 168906,
+        "correct_answer_0": "A bumblebee lands, grips the flower in its jaws, and vibrates its flight muscles at just the right frequency, and the fl",
+        "true_range": [
+          145.46,
+          157.785
+        ],
+        "predicted_range": [
+          145.46,
+          157.785
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        145.46,
+        157.785
+      ],
+      "true_range": [
+        145.46,
+        157.785
+      ],
+      "verdict": "LOCATE_INFO_OK"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        112.65,
+        157.785
+      ],
+      "true_range": [
+        145.46,
+        157.785
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 12415,
+    "question_id": 55607,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "playground",
+        "E"
+      ],
+      "resolved_via": "paragraph_ranges",
+      "answer_sentence_value": "Walk along, ignore the first building on your right, and the playground is a little further along on the opposite side.",
+      "predicted_paragraph_range": [
+        326.78,
+        334.165
+      ],
+      "true_range": [
+        322.54,
+        336.64502
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 165035,
+        "correct_answer_0": "Go back to the crossroads and turn onto the West path.",
+        "true_range": [
+          322.54,
+          326.38
+        ],
+        "predicted_range": [
+          322.54,
+          326.38
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 165036,
+        "correct_answer_0": "Walk along, ignore the first building on your right,",
+        "true_range": [
+          326.78,
+          334.165
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 165037,
+        "correct_answer_0": "and the playground is a little further along on the opposite side.",
+        "true_range": [
+          326.78,
+          334.165
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 165038,
+        "correct_answer_0": "There are benches there for the grown ups.",
+        "true_range": [
+          334.48502,
+          336.64502
+        ],
+        "predicted_range": [
+          334.48502,
+          336.64502
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        326.78,
+        334.165
+      ],
+      "true_range": [
+        322.54,
+        336.64502
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        309.71503,
+        326.38
+      ],
+      "true_range": [
+        322.54,
+        336.64502
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  },
+  {
+    "quiz_id": 12529,
+    "question_id": 56198,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "fire"
+      ],
+      "answer_sentence_value": "The reason given at the time was the danger of fire most of the city was built of timber.",
+      "predicted_paragraph_range": [
+        133.47499,
+        166.27
+      ],
+      "true_range": [
+        148.77501,
+        155.09502
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 168300,
+        "correct_answer_0": "The reason given at the time was the danger of fire.",
+        "true_range": [
+          148.77501,
+          155.09502
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 168301,
+        "correct_answer_0": "Most of the city was built of timber.",
+        "true_range": [
+          148.77501,
+          155.09502
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        148.77501,
+        155.09502
+      ],
+      "true_range": [
+        148.77501,
+        155.09502
+      ],
+      "verdict": "LOCATE_INFO_OK"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        133.47499,
+        166.27
+      ],
+      "true_range": [
+        148.77501,
+        155.09502
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 12529,
+    "question_id": 56203,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "machines"
+      ],
+      "answer_sentence_value": "Automatic production lines could turn out more containers in an hour than a team of six managed in a day, and by the nineteen twenties, almost every jar and bottle was coming out of machines.",
+      "predicted_paragraph_range": [
+        258.11,
+        292.245
+      ],
+      "true_range": [
+        274.28,
+        287.96002
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 168331,
+        "correct_answer_0": "And by the nineteen twenties, almost every jar and bottle was coming out of machines.",
+        "true_range": [
+          274.28,
+          287.96002
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        274.28,
+        287.96002
+      ],
+      "true_range": [
+        274.28,
+        287.96002
+      ],
+      "verdict": "LOCATE_INFO_OK"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        258.11,
+        292.245
+      ],
+      "true_range": [
+        274.28,
+        287.96002
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 12564,
+    "question_id": 56426,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "ceiling"
+      ],
+      "answer_sentence_value": "A little of the sound travels straight to your ears, but most of it reaches you a moment later after bouncing off the walls and the ceiling.",
+      "predicted_paragraph_range": [
+        69.405,
+        97.145004
+      ],
+      "true_range": [
+        79.630005,
+        88.67
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 169373,
+        "correct_answer_0": "A little of the sound travels straight to your ears, but most of it reaches you a moment later after bouncing off the wa",
+        "true_range": [
+          79.630005,
+          88.67
+        ],
+        "predicted_range": [
+          79.630005,
+          88.67
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        79.630005,
+        88.67
+      ],
+      "true_range": [
+        79.630005,
+        88.67
+      ],
+      "verdict": "LOCATE_INFO_OK"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        69.405,
+        97.145004
+      ],
+      "true_range": [
+        79.630005,
+        88.67
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 12564,
+    "question_id": 56432,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "concrete"
+      ],
+      "answer_sentence_value": "Steel for the frames, glass for the light, and for the walls, concrete poured in wide smooth panels.",
+      "predicted_paragraph_range": [
+        207.065,
+        245.285
+      ],
+      "true_range": [
+        226.48,
+        240.565
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 169411,
+        "correct_answer_0": "The twentieth century wanted bigger halls and new materials to build them with, steel for the frames, glass for the ligh",
+        "true_range": [
+          226.48,
+          240.565
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        232.72499,
+        240.565
+      ],
+      "true_range": [
+        226.48,
+        240.565
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        207.065,
+        245.285
+      ],
+      "true_range": [
+        226.48,
+        240.565
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 12564,
+    "question_id": 56434,
+    "primary_bucket": "MAPPING_OFF",
+    "extract_vocab_data": {
+      "search_list": [
+        "event"
+      ],
+      "answer_sentence_value": "Curtains slide out of the walls and panels revolve, so the acoustics can be adjusted to suit each type of event: a symphony on Friday, a conference on Monday, an amplified band at the weekend.",
+      "predicted_paragraph_range": [
+        323.575,
+        363.515
+      ],
+      "true_range": [
+        340.61002,
+        363.515
+      ],
+      "verdict": "PARAGRAPH_OK"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 169425,
+        "correct_answer_0": "Curtains slide out of the walls and panels revolve so the acoustics can be adjusted to suit each type of event, a sympho",
+        "true_range": [
+          340.61002,
+          363.515
+        ],
+        "predicted_range": [
+          340.61002,
+          354.71503
+        ],
+        "verdict": "LOOKUP_MISMATCH"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        340.61002,
+        354.71503
+      ],
+      "true_range": [
+        340.61002,
+        363.515
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        323.575,
+        363.515
+      ],
+      "true_range": [
+        340.61002,
+        363.515
+      ],
+      "verdict": "PARAGRAPH_OK"
+    }
+  },
+  {
+    "quiz_id": 12588,
+    "question_id": 56614,
+    "primary_bucket": "NO_AUDIO",
+    "extract_vocab_data": {
+      "search_list": [
+        "the costings",
+        "leave it out"
+      ],
+      "answer_sentence_value": "We say the costings are in the written report.",
+      "predicted_paragraph_range": [
+        466.645,
+        474.96002
+      ],
+      "true_range": [
+        448.29,
+        479.44
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    },
+    "lookup_timestamps": [
+      {
+        "practice_question_id": 180915,
+        "correct_answer_0": "which just leaves the costings.",
+        "true_range": [
+          448.29,
+          454.61002
+        ],
+        "predicted_range": null,
+        "verdict": "LOOKUP_NO_MATCH"
+      },
+      {
+        "practice_question_id": 180916,
+        "correct_answer_0": "I drop them honestly.",
+        "true_range": [
+          454.61002,
+          456.37003
+        ],
+        "predicted_range": [
+          454.61002,
+          456.37003
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 180917,
+        "correct_answer_0": "Without the supplier quote, every figure in there is a guess.",
+        "true_range": [
+          456.93002,
+          460.69
+        ],
+        "predicted_range": [
+          456.93002,
+          460.69
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 180918,
+        "correct_answer_0": "The panel will ask about cost, though.",
+        "true_range": [
+          461.125,
+          463.765
+        ],
+        "predicted_range": [
+          461.125,
+          463.765
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 180919,
+        "correct_answer_0": "Couldn't we hand them a sheet with the figures on?",
+        "true_range": [
+          464.245,
+          466.645
+        ],
+        "predicted_range": [
+          464.245,
+          466.645
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 180920,
+        "correct_answer_0": "A sheet of guesses is still guesses.",
+        "true_range": [
+          466.645,
+          469.765
+        ],
+        "predicted_range": [
+          466.645,
+          469.765
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 180921,
+        "correct_answer_0": "We say the costings are in the written report.",
+        "true_range": [
+          470.165,
+          473.205
+        ],
+        "predicted_range": [
+          470.165,
+          473.205
+        ],
+        "verdict": "LOOKUP_OK"
+      },
+      {
+        "practice_question_id": 180922,
+        "correct_answer_0": "But they go into the report in full.",
+        "true_range": [
+          476.72,
+          479.44
+        ],
+        "predicted_range": [
+          476.72,
+          479.44
+        ],
+        "verdict": "LOOKUP_OK"
+      }
+    ],
+    "locate_info_time_ranges": {
+      "predicted_range": [
+        475.04,
+        476.16
+      ],
+      "true_range": [
+        448.29,
+        479.44
+      ],
+      "verdict": "LOCATE_INFO_MISMATCH"
+    },
+    "extract_vocab_data_candidate_monotonic": {
+      "predicted_paragraph_range": [
+        448.29,
+        454.61002
+      ],
+      "true_range": [
+        448.29,
+        479.44
+      ],
+      "verdict": "PARAGRAPH_MISMATCH"
+    }
+  }
+]
