@@ -47,10 +47,6 @@ POLL_MAX_TRIES = 20  # 10 phút
 
 RESULT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "run_listening_builder_batch_result.json")
 
-_FALLBACK_TOKEN = (
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9hY2Nlc3MiOmZhbHNlLCJhcHBfYWNjZXNzIjpmYWxzZSwiZXhwIjoxNzkwMzI1MTYxLCJpYXQiOjE3OTAwNjU5NjEsImlkIjoiMDMxNzkwMWMtNDA1ZS00NWU4LTlmY2YtNzljZWEwMGQ2OGMwIiwiaXNzIjoiZGlyZWN0dXMiLCJyb2xlIjoiNDliMTliM2EtM2NjZi00OWM5LWExMGItYzc2N2ZiMGRmMzgxIn0.CYBHDBlBc34AbWUFb09SmfMyssy-fKz0-bydU1WvpSE"
-)
-
 # ---------------------------------------------------------------------------
 # Danh sách quiz cần chạy — sửa trực tiếp ở đây.
 #   - Không có "question_ids" (hoặc để []) -> generate mới toàn bộ quiz.
@@ -368,8 +364,8 @@ def run(items: list, agents_token: str, api_token: str) -> None:
 
 
 def main():
-    agents_token = os.environ.get("GUIDED_RETRY_TOKEN") or _FALLBACK_TOKEN
-    api_token = os.environ.get("YOUPASS_API_TOKEN") or _FALLBACK_TOKEN
+    agents_token = os.environ.get("GUIDED_RETRY_TOKEN") or ""
+    api_token = os.environ.get("YOUPASS_API_TOKEN") or ""
 
     exp = _jwt_exp(agents_token)
     if exp is None:

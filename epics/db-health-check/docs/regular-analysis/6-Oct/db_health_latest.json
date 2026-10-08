@@ -1,0 +1,608 @@
+{
+  "expensive_queries": [
+    {
+      "rows": 274563,
+      "calls": 14454,
+      "queryid": 4053901154004886075,
+      "cache_hit_pct": 1.45,
+      "query_preview": "SELECT * FROM \"public\".\"processed_transcriptions\" WHERE sub_answer_id IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19)",
+      "mean_exec_time_ms": 6035.15,
+      "total_exec_time_ms": 87232075.64
+    },
+    {
+      "rows": 180889,
+      "calls": 6040282,
+      "queryid": 2041835440478022667,
+      "cache_hit_pct": 100.0,
+      "query_preview": "SELECT \n\t\t\tssp.id,\n\t\t\tssp.user_id,\n\t\t\tssp.study_plan_id,\n\t\t\tssp.status,\n\t\t\tssp.end_date,\n\t\t\tCOALESCE(ssp.product_id, sp.product_id) AS product_id,\n\t\t\tssp.purchased_before_onboarding_survey,\n\t\t\tCOALESCE(p1.name, p2.name) AS product_name FROM public.student_study_plan AS ssp LEFT JOIN public.product AS p1 ON p1.id = ssp.product_id LEFT JOIN public.study_plan AS sp ON sp.id = ssp.study_plan_id LEFT JOIN public.product AS p2 ON p2.id = sp.product_id WHERE ssp.user_id = $1 AND ssp.plan_type = $2 AND (ssp.end_date IS NULL OR ssp.end_date >= CURRENT_DATE) AND ssp.status IN ($3,$4,$5,$6,$7) ORDER BY ssp.id DESC",
+      "mean_exec_time_ms": 4.38,
+      "total_exec_time_ms": 26471962.2
+    },
+    {
+      "rows": 124546003,
+      "calls": 1185282,
+      "queryid": 4536098379107189190,
+      "cache_hit_pct": 84.94,
+      "query_preview": "SELECT distinct quiz FROM \"public\".\"answer\" WHERE user_created = $1",
+      "mean_exec_time_ms": 21.72,
+      "total_exec_time_ms": 25746540.88
+    },
+    {
+      "rows": 673511,
+      "calls": 6040273,
+      "queryid": -1021299240281329453,
+      "cache_hit_pct": 100.0,
+      "query_preview": "SELECT \"id\",\"status\" FROM \"public\".\"student_study_plan\" WHERE user_id = $1 AND plan_type = $2 ORDER BY id DESC,\"student_study_plan\".\"id\" LIMIT $3",
+      "mean_exec_time_ms": 3.61,
+      "total_exec_time_ms": 21783726.25
+    },
+    {
+      "rows": 1073987,
+      "calls": 264717,
+      "queryid": 1896758460480668054,
+      "cache_hit_pct": 49.82,
+      "query_preview": "SELECT category as group_field, COUNT(*) as count FROM \"public\".\"user_vocab_bank\" WHERE user_id = $1 AND status != $2 GROUP BY \"category\"",
+      "mean_exec_time_ms": 73.78,
+      "total_exec_time_ms": 19531631.83
+    },
+    {
+      "rows": 181869881,
+      "calls": 563,
+      "queryid": 1647738405739846748,
+      "cache_hit_pct": 91.56,
+      "query_preview": "SELECT DISTINCT pronunciation_corrections.mispronounced_word AS pronunciation_corrections_mispronounced_word, pronunciation_corrections.corrected_word_ipa AS pronunciation_corrections_corrected_word_ipa, pronunciation_corrections.corrected_word_audio AS pronunciation_corrections_corrected_word_audio \nFROM pronunciation_corrections \nWHERE pronunciation_corrections.mispronounced_word IN ('big', 'quite', 'happen', 'if', 'think', 'yes', 'vehicles', 'don''t', 'green', 'makes', 'because', 'space', 'cities', 'is', 'pollute')",
+      "mean_exec_time_ms": 21971.26,
+      "total_exec_time_ms": 12369819.48
+    },
+    {
+      "rows": 0,
+      "calls": 1244870,
+      "queryid": -3367626333822613063,
+      "cache_hit_pct": 100.0,
+      "query_preview": "SELECT * FROM \"notification\" WHERE user_id = $1 AND push_id IS NOT NULL AND id > $2 AND created_at > $3 ORDER BY id ASC LIMIT $4",
+      "mean_exec_time_ms": 9.01,
+      "total_exec_time_ms": 11210575.71
+    },
+    {
+      "rows": 147702339,
+      "calls": 390,
+      "queryid": 7711436302698069101,
+      "cache_hit_pct": 85.28,
+      "query_preview": "SELECT DISTINCT pronunciation_corrections.mispronounced_word AS pronunciation_corrections_mispronounced_word, pronunciation_corrections.corrected_word_ipa AS pronunciation_corrections_corrected_word_ipa, pronunciation_corrections.corrected_word_audio AS pronunciation_corrections_corrected_word_audio \nFROM pronunciation_corrections \nWHERE pronunciation_corrections.mispronounced_word IN ('energetic', 'things', 'paces', 'symbolize', 'red', 'think', 'but', 'express', 'are', 'people', 'colors', 'personalities', 'car', 'it''s', 'personal', 'white', 'the', 'It''s')",
+      "mean_exec_time_ms": 23604.2,
+      "total_exec_time_ms": 9205637.31
+    },
+    {
+      "rows": 886619,
+      "calls": 106051,
+      "queryid": 2039278166804936414,
+      "cache_hit_pct": 87.93,
+      "query_preview": "SELECT \n\t\t\tuvb.category,\n\t\t\tCOUNT(*) as total_words,\n\t\t\tSUM(CASE WHEN uvb.learning_status = $3 THEN $4 ELSE $5 END) as mastered,\n\t\t\tSUM(CASE WHEN uvb.learning_status = $6 THEN $7 ELSE $8 END) as partially_remembered,\n\t\t\tSUM(CASE WHEN uvb.learning_status = $9 OR uvb.learning_status IS NULL THEN $10 ELSE $11 END) as not_mastered,\n\t\t\tMAX(uvc.sort) as sort\n\t\t FROM user_vocab_bank uvb LEFT JOIN user_vocab_category uvc ON uvc.ref_id = uvb.category AND uvc.user_id = uvb.user_id WHERE uvb.user_id = $1 AND uvb.status != $2 GROUP BY \"uvb\".\"category\"",
+      "mean_exec_time_ms": 82.16,
+      "total_exec_time_ms": 8713041.87
+    },
+    {
+      "rows": 143089479,
+      "calls": 390,
+      "queryid": 357081732982152793,
+      "cache_hit_pct": 84.86,
+      "query_preview": "SELECT DISTINCT pronunciation_corrections.mispronounced_word AS pronunciation_corrections_mispronounced_word, pronunciation_corrections.corrected_word_ipa AS pronunciation_corrections_corrected_word_ipa, pronunciation_corrections.corrected_word_audio AS pronunciation_corrections_corrected_word_audio \nFROM pronunciation_corrections \nWHERE pronunciation_corrections.mispronounced_word IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17)",
+      "mean_exec_time_ms": 21975.4,
+      "total_exec_time_ms": 8570406.06
+    }
+  ],
+  "vacuum_needed": [
+    {
+      "n_dead_tup": 1108469,
+      "n_live_tup": 6880619,
+      "schemaname": "public",
+      "table_name": "student_study_item",
+      "last_vacuum": null,
+      "last_analyze": null,
+      "dead_ratio_pct": 13.87,
+      "last_autovacuum": "2026-09-27T17:54:19.129460+00:00",
+      "last_autoanalyze": "2026-10-05T17:43:54.712382+00:00"
+    },
+    {
+      "n_dead_tup": 954458,
+      "n_live_tup": 11447702,
+      "schemaname": "public",
+      "table_name": "student_daily_progress",
+      "last_vacuum": null,
+      "last_analyze": null,
+      "dead_ratio_pct": 7.7,
+      "last_autovacuum": null,
+      "last_autoanalyze": "2026-10-05T14:44:25.726051+00:00"
+    },
+    {
+      "n_dead_tup": 335784,
+      "n_live_tup": 2184126,
+      "schemaname": "public",
+      "table_name": "processed_transcriptions",
+      "last_vacuum": null,
+      "last_analyze": null,
+      "dead_ratio_pct": 13.33,
+      "last_autovacuum": null,
+      "last_autoanalyze": "2026-10-05T16:09:56.366538+00:00"
+    },
+    {
+      "n_dead_tup": 319229,
+      "n_live_tup": 1867493,
+      "schemaname": "public",
+      "table_name": "user_device",
+      "last_vacuum": null,
+      "last_analyze": null,
+      "dead_ratio_pct": 14.6,
+      "last_autovacuum": null,
+      "last_autoanalyze": "2026-09-28T14:21:38.437541+00:00"
+    },
+    {
+      "n_dead_tup": 250837,
+      "n_live_tup": 381898,
+      "schemaname": "public",
+      "table_name": "user_vocab_bank",
+      "last_vacuum": null,
+      "last_analyze": null,
+      "dead_ratio_pct": 39.64,
+      "last_autovacuum": null,
+      "last_autoanalyze": null
+    },
+    {
+      "n_dead_tup": 246110,
+      "n_live_tup": 2407433,
+      "schemaname": "public",
+      "table_name": "review",
+      "last_vacuum": null,
+      "last_analyze": null,
+      "dead_ratio_pct": 9.27,
+      "last_autovacuum": "2026-09-29T04:28:59.522409+00:00",
+      "last_autoanalyze": "2026-10-05T07:42:58.881700+00:00"
+    },
+    {
+      "n_dead_tup": 222521,
+      "n_live_tup": 719216,
+      "schemaname": "public",
+      "table_name": "answer",
+      "last_vacuum": null,
+      "last_analyze": null,
+      "dead_ratio_pct": 23.63,
+      "last_autovacuum": null,
+      "last_autoanalyze": null
+    },
+    {
+      "n_dead_tup": 152767,
+      "n_live_tup": 172042,
+      "schemaname": "public",
+      "table_name": "directus_files",
+      "last_vacuum": null,
+      "last_analyze": null,
+      "dead_ratio_pct": 47.03,
+      "last_autovacuum": null,
+      "last_autoanalyze": null
+    },
+    {
+      "n_dead_tup": 147392,
+      "n_live_tup": 768014,
+      "schemaname": "public",
+      "table_name": "directus_users",
+      "last_vacuum": null,
+      "last_analyze": null,
+      "dead_ratio_pct": 16.1,
+      "last_autovacuum": null,
+      "last_autoanalyze": "2026-10-04T08:37:17.809458+00:00"
+    },
+    {
+      "n_dead_tup": 103824,
+      "n_live_tup": 96571,
+      "schemaname": "public",
+      "table_name": "user_device_log",
+      "last_vacuum": null,
+      "last_analyze": null,
+      "dead_ratio_pct": 51.81,
+      "last_autovacuum": null,
+      "last_autoanalyze": null
+    }
+  ],
+  "index_bloat_and_seq_scans": {
+    "largest_indexes": [
+      {
+        "idx_scan": 2841941,
+        "index_name": "success_quiz_log_answer_idx",
+        "index_size": "1741 MB",
+        "table_name": "success_quiz_log",
+        "schema_name": "public",
+        "idx_tup_read": 165503456,
+        "idx_tup_fetch": 165503426,
+        "index_size_bytes": 1825898496
+      },
+      {
+        "idx_scan": 0,
+        "index_name": "idx_success_quiz_log_passage_id",
+        "index_size": "1736 MB",
+        "table_name": "success_quiz_log",
+        "schema_name": "public",
+        "idx_tup_read": 0,
+        "idx_tup_fetch": 0,
+        "index_size_bytes": 1820688384
+      },
+      {
+        "idx_scan": 539,
+        "index_name": "success_quiz_log_pkey",
+        "index_size": "1736 MB",
+        "table_name": "success_quiz_log",
+        "schema_name": "public",
+        "idx_tup_read": 15923741562,
+        "idx_tup_fetch": 4803504078,
+        "index_size_bytes": 1819975680
+      },
+      {
+        "idx_scan": 5524460,
+        "index_name": "draft_answer_pkey",
+        "index_size": "1638 MB",
+        "table_name": "draft_answer",
+        "schema_name": "public",
+        "idx_tup_read": 15729550,
+        "idx_tup_fetch": 5524191,
+        "index_size_bytes": 1717075968
+      },
+      {
+        "idx_scan": 21504,
+        "index_name": "success_quiz_log_dashboard",
+        "index_size": "1539 MB",
+        "table_name": "success_quiz_log",
+        "schema_name": "public",
+        "idx_tup_read": 21504,
+        "idx_tup_fetch": 10752,
+        "index_size_bytes": 1614151680
+      },
+      {
+        "idx_scan": 141501,
+        "index_name": "answer_user_id_idx",
+        "index_size": "1336 MB",
+        "table_name": "answer",
+        "schema_name": "public",
+        "idx_tup_read": 3903755,
+        "idx_tup_fetch": 3689726,
+        "index_size_bytes": 1400897536
+      },
+      {
+        "idx_scan": 0,
+        "index_name": "idx_directus_files_filename_download_trgm",
+        "index_size": "1257 MB",
+        "table_name": "directus_files",
+        "schema_name": "public",
+        "idx_tup_read": 0,
+        "idx_tup_fetch": 0,
+        "index_size_bytes": 1318330368
+      },
+      {
+        "idx_scan": 0,
+        "index_name": "idx_directus_files_title_trgm",
+        "index_size": "1202 MB",
+        "table_name": "directus_files",
+        "schema_name": "public",
+        "idx_tup_read": 0,
+        "idx_tup_fetch": 0,
+        "index_size_bytes": 1260879872
+      },
+      {
+        "idx_scan": 299165940,
+        "index_name": "answer_user_created",
+        "index_size": "1109 MB",
+        "table_name": "answer",
+        "schema_name": "public",
+        "idx_tup_read": 495905809,
+        "idx_tup_fetch": 234158337,
+        "index_size_bytes": 1162813440
+      },
+      {
+        "idx_scan": 98761,
+        "index_name": "idx_pron_word_ipa_cov",
+        "index_size": "1036 MB",
+        "table_name": "pronunciation_corrections",
+        "schema_name": "public",
+        "idx_tup_read": 2509912337,
+        "idx_tup_fetch": 46311813,
+        "index_size_bytes": 1086799872
+      }
+    ],
+    "sequential_scan_heavy_tables": [
+      {
+        "idx_scan": 0,
+        "seq_scan": 271,
+        "n_live_tup": 699511,
+        "schemaname": "public",
+        "table_name": "student_activity",
+        "seq_scan_pct": 100.0,
+        "seq_tup_read": 4240873812
+      },
+      {
+        "idx_scan": 654,
+        "seq_scan": 86138,
+        "n_live_tup": 6331,
+        "schemaname": "public",
+        "table_name": "activity_log",
+        "seq_scan_pct": 99.25,
+        "seq_tup_read": 8131299067
+      },
+      {
+        "idx_scan": 197,
+        "seq_scan": 21879,
+        "n_live_tup": 2452,
+        "schemaname": "public",
+        "table_name": "real_test_result",
+        "seq_scan_pct": 99.11,
+        "seq_tup_read": 813450842
+      },
+      {
+        "idx_scan": 5486,
+        "seq_scan": 391996,
+        "n_live_tup": 575,
+        "schemaname": "public",
+        "table_name": "practice_flow",
+        "seq_scan_pct": 98.62,
+        "seq_tup_read": 3806130798
+      },
+      {
+        "idx_scan": 952,
+        "seq_scan": 55383,
+        "n_live_tup": 16756,
+        "schemaname": "public",
+        "table_name": "registration_request_tag_search",
+        "seq_scan_pct": 98.31,
+        "seq_tup_read": 910047260
+      },
+      {
+        "idx_scan": 179,
+        "seq_scan": 8646,
+        "n_live_tup": 1071,
+        "schemaname": "public",
+        "table_name": "directus_permissions",
+        "seq_scan_pct": 97.97,
+        "seq_tup_read": 10226174
+      },
+      {
+        "idx_scan": 688,
+        "seq_scan": 12485,
+        "n_live_tup": 9977,
+        "schemaname": "public",
+        "table_name": "pronunciation_practice_result",
+        "seq_scan_pct": 94.78,
+        "seq_tup_read": 1013265853
+      },
+      {
+        "idx_scan": 144,
+        "seq_scan": 2112,
+        "n_live_tup": 74356,
+        "schemaname": "public",
+        "table_name": "otp_attempt",
+        "seq_scan_pct": 93.62,
+        "seq_tup_read": 132898758
+      },
+      {
+        "idx_scan": 5926,
+        "seq_scan": 45264,
+        "n_live_tup": 2351,
+        "schemaname": "public",
+        "table_name": "order_items",
+        "seq_scan_pct": 88.42,
+        "seq_tup_read": 3118784389
+      },
+      {
+        "idx_scan": 1731,
+        "seq_scan": 11657,
+        "n_live_tup": 4831,
+        "schemaname": "public",
+        "table_name": "entrance_test_comment",
+        "seq_scan_pct": 87.07,
+        "seq_tup_read": 55216914
+      }
+    ]
+  },
+  "index_efficiency": {
+    "unused_indexes": [
+      {
+        "idx_scan": 0,
+        "index_name": "idx_success_quiz_log_passage_id",
+        "index_size": "1736 MB",
+        "schemaname": "public",
+        "table_name": "success_quiz_log",
+        "idx_tup_read": 0,
+        "idx_tup_fetch": 0,
+        "index_size_bytes": 1820688384
+      },
+      {
+        "idx_scan": 0,
+        "index_name": "idx_directus_files_filename_download_trgm",
+        "index_size": "1257 MB",
+        "schemaname": "public",
+        "table_name": "directus_files",
+        "idx_tup_read": 0,
+        "idx_tup_fetch": 0,
+        "index_size_bytes": 1318330368
+      },
+      {
+        "idx_scan": 0,
+        "index_name": "idx_directus_files_title_trgm",
+        "index_size": "1202 MB",
+        "schemaname": "public",
+        "table_name": "directus_files",
+        "idx_tup_read": 0,
+        "idx_tup_fetch": 0,
+        "index_size_bytes": 1260879872
+      },
+      {
+        "idx_scan": 0,
+        "index_name": "idx_answer_date_updated",
+        "index_size": "587 MB",
+        "schemaname": "public",
+        "table_name": "answer",
+        "idx_tup_read": 0,
+        "idx_tup_fetch": 0,
+        "index_size_bytes": 615538688
+      },
+      {
+        "idx_scan": 0,
+        "index_name": "idx_answer_review_ccnew",
+        "index_size": "256 MB",
+        "schemaname": "public",
+        "table_name": "answer",
+        "idx_tup_read": 0,
+        "idx_tup_fetch": 0,
+        "index_size_bytes": 268836864
+      },
+      {
+        "idx_scan": 0,
+        "index_name": "idx_raw_vocab_raw_data_gin",
+        "index_size": "185 MB",
+        "schemaname": "public",
+        "table_name": "raw_vocab",
+        "idx_tup_read": 0,
+        "idx_tup_fetch": 0,
+        "index_size_bytes": 194207744
+      },
+      {
+        "idx_scan": 0,
+        "index_name": "idx_ai_token_log_review_id",
+        "index_size": "74 MB",
+        "schemaname": "public",
+        "table_name": "ai_token_log",
+        "idx_tup_read": 0,
+        "idx_tup_fetch": 0,
+        "index_size_bytes": 77447168
+      },
+      {
+        "idx_scan": 0,
+        "index_name": "idx_directus_revisions_parent",
+        "index_size": "50 MB",
+        "schemaname": "public",
+        "table_name": "directus_revisions",
+        "idx_tup_read": 0,
+        "idx_tup_fetch": 0,
+        "index_size_bytes": 52256768
+      },
+      {
+        "idx_scan": 0,
+        "index_name": "idx_sub_answer_question_id",
+        "index_size": "10 MB",
+        "schemaname": "public",
+        "table_name": "sub_answer",
+        "idx_tup_read": 0,
+        "idx_tup_fetch": 0,
+        "index_size_bytes": 10821632
+      },
+      {
+        "idx_scan": 0,
+        "index_name": "idx_dtsp_plan_stuck",
+        "index_size": "4552 kB",
+        "schemaname": "public",
+        "table_name": "diagnostic_test_skill_progress",
+        "idx_tup_read": 0,
+        "idx_tup_fetch": 0,
+        "index_size_bytes": 4661248
+      }
+    ],
+    "low_efficiency_indexes": [
+      {
+        "idx_scan": 3886,
+        "index_name": "idx_review_reclaim_stale",
+        "index_size": "4808 kB",
+        "schemaname": "public",
+        "table_name": "review",
+        "idx_tup_read": 87297,
+        "idx_tup_fetch": 8,
+        "fetch_efficiency_pct": 0.01
+      },
+      {
+        "idx_scan": 196,
+        "index_name": "customer_feedback_pkey",
+        "index_size": "16 kB",
+        "schemaname": "public",
+        "table_name": "customer_feedback",
+        "idx_tup_read": 12740,
+        "idx_tup_fetch": 1,
+        "fetch_efficiency_pct": 0.01
+      },
+      {
+        "idx_scan": 496,
+        "index_name": "dcoin_transaction_pkey",
+        "index_size": "42 MB",
+        "schemaname": "public",
+        "table_name": "dcoin_transaction",
+        "idx_tup_read": 271760441,
+        "idx_tup_fetch": 50441,
+        "fetch_efficiency_pct": 0.02
+      },
+      {
+        "idx_scan": 178570,
+        "index_name": "shifts_pkey",
+        "index_size": "16 kB",
+        "schemaname": "public",
+        "table_name": "shifts",
+        "idx_tup_read": 178570,
+        "idx_tup_fetch": 136,
+        "fetch_efficiency_pct": 0.08
+      },
+      {
+        "idx_scan": 3768584,
+        "index_name": "idx_answer_quiz_type_user_created_type",
+        "index_size": "315 MB",
+        "schemaname": "public",
+        "table_name": "answer",
+        "idx_tup_read": 3602188358,
+        "idx_tup_fetch": 5662381,
+        "fetch_efficiency_pct": 0.16
+      },
+      {
+        "idx_scan": 266,
+        "index_name": "ielts_blog_seo_pkey",
+        "index_size": "16 kB",
+        "schemaname": "public",
+        "table_name": "ielts_blog_seo",
+        "idx_tup_read": 40862,
+        "idx_tup_fetch": 67,
+        "fetch_efficiency_pct": 0.16
+      },
+      {
+        "idx_scan": 502327,
+        "index_name": "answer_type",
+        "index_size": "300 MB",
+        "schemaname": "public",
+        "table_name": "answer",
+        "idx_tup_read": 631450794,
+        "idx_tup_fetch": 1244869,
+        "fetch_efficiency_pct": 0.2
+      },
+      {
+        "idx_scan": 198,
+        "index_name": "tracking_mvp_pkey",
+        "index_size": "1760 kB",
+        "schemaname": "public",
+        "table_name": "tracking_mvp",
+        "idx_tup_read": 15765447,
+        "idx_tup_fetch": 31171,
+        "fetch_efficiency_pct": 0.2
+      },
+      {
+        "idx_scan": 63,
+        "index_name": "vocab_pronunciations_pkey",
+        "index_size": "6064 kB",
+        "schemaname": "public",
+        "table_name": "vocab_pronunciations",
+        "idx_tup_read": 6090991,
+        "idx_tup_fetch": 19000,
+        "fetch_efficiency_pct": 0.31
+      },
+      {
+        "idx_scan": 99504,
+        "index_name": "type_pkey",
+        "index_size": "16 kB",
+        "schemaname": "public",
+        "table_name": "type",
+        "idx_tup_read": 99501,
+        "idx_tup_fetch": 395,
+        "fetch_efficiency_pct": 0.4
+      }
+    ]
+  }
+}

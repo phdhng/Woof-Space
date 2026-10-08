@@ -6,3 +6,4 @@
 .claude/commands
 epics/*/repos/*
 !epics/*/repos/README.md
+.env

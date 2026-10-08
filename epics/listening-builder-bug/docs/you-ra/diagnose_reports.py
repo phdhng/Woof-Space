@@ -45,11 +45,6 @@ BUG_FILE = os.path.join(HERE, "bug_reported.md")
 OUT_JSON = os.path.join(HERE, "report_diagnosis.json")
 OUT_MD = os.path.join(HERE, "report_diagnosis.md")
 
-# Token production của bạn (fallback). Override bằng env YOUPASS_API_TOKEN.
-_FALLBACK_TOKEN = (
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9hY2Nlc3MiOmZhbHNlLCJhcHBfYWNjZXNzIjpmYWxzZSwiZXhwIjoxNzkwMzI1MTYxLCJpYXQiOjE3OTAwNjU5NjEsImlkIjoiMDMxNzkwMWMtNDA1ZS00NWU4LTlmY2YtNzljZWEwMGQ2OGMwIiwiaXNzIjoiZGlyZWN0dXMiLCJyb2xlIjoiNDliMTliM2EtM2NjZi00OWM5LWExMGItYzc2N2ZiMGRmMzgxIn0.CYBHDBlBc34AbWUFb09SmfMyssy-fKz0-bydU1WvpSE"
-)
-
 # Ngưỡng — giả định ban đầu, chỉnh lại sau khi nhìn ~10 case thật.
 SIM_WRONG = 0.60   # < ngưỡng này: coi như không khớp câu L2 nào
 SIM_MATCH = 0.85   # >= ngưỡng này: coi như khớp chắc 1 câu L2
@@ -363,7 +358,7 @@ def primary_bucket(buckets: list[str]) -> str:
 
 
 def run(only_qids: Optional[set[int]]):
-    token = os.environ.get("YOUPASS_API_TOKEN") or _FALLBACK_TOKEN
+    token = os.environ.get("YOUPASS_API_TOKEN") or ""
     exp = _jwt_exp(token)
     if exp is None:
         print("ERROR: token không phải JWT hợp lệ."); sys.exit(1)
