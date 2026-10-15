@@ -6,4 +6,6 @@
 .claude/commands
 epics/*/repos/*
 !epics/*/repos/README.md
+orphan-tasks/*/repos/*
+!orphan-tasks/*/repos/README.md
 .env
