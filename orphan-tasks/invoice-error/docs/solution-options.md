@@ -64,24 +64,27 @@ Giữ nguyên luồng hiện tại (mỗi callback một goroutine). Trước kh
 
 ## 3. Kết hợp Redis lock với retry 1 lần
 
-Redis lock là cơ chế chính, ngăn gọi Misa đồng thời. Retry 1 lần khi Misa trả lỗi số hoá đơn không liên tục có thể thêm vào làm lưới an toàn cho các case hiếm mà khoá không che được: khoá hết hạn giữa chừng, hoặc Misa trả lỗi này vì nguyên nhân khác.
+Redis lock là cơ chế chính, ngăn gọi Misa đồng thời. Retry 1 lần khi Misa trả lỗi số hoá đơn không liên tục là lưới an toàn cho các case hiếm mà khoá không che được: khoá hết hạn giữa chừng, hoặc Misa trả lỗi này vì nguyên nhân khác.
 
 ### Cách retry hoạt động
 
-1. Gọi `CreateInvoiceForPayment` như bình thường (bên trong khoá).
-2. Nếu lỗi trả về đúng mã `InvoiceNumberNotContinuous`:
-   - gửi Lark: gặp lỗi số hoá đơn không liên tục, sẽ retry 1 lần;
-   - chờ một khoảng ngẫu nhiên ngắn, rồi gọi `CreateInvoiceForPayment` thêm đúng 1 lần.
-3. Retry thành công: gửi Lark báo thành công kèm mã hoá đơn, và ghi `invoice_transaction_id` như bình thường.
-4. Retry thất bại: gửi Lark báo thất bại sau retry, rồi admin xuất tay.
+Chỉ áp dụng cho luồng callback tự động. Xuất tay (`PublishInvoice`) không retry, lỗi trả thẳng về cho admin.
+
+1. Gọi `CreateInvoiceForPayment` như bình thường, bên trong khoá.
+2. Nếu Misa trả đúng mã `InvoiceNumberNotContinuous` (ở `ErrorCode` của response tổng hoặc ở `PublishInvoiceResult[0].ErrorCode`):
+   - gửi Lark: gặp lỗi `InvoiceNumberNotContinuous`, sẽ retry 1 lần;
+   - gọi `CreateInvoiceForPayment` thêm đúng 1 lần, **ngay lập tức** và **vẫn giữ khoá**, nên lần retry không chồng với hoá đơn khác.
+3. Retry thành công: gửi Lark báo thành công kèm `invoice_transaction_id`, và ghi hoá đơn vào DB như bình thường.
+4. Retry vẫn lỗi: dừng, gửi Lark báo lỗi xuất hoá đơn (kèm ghi chú đã retry), nhả khoá để hoá đơn khác chạy tiếp. Admin xuất tay hoá đơn này.
 5. Các lỗi khác không retry.
 
-### Lưu ý khi triển khai
+### Chi tiết triển khai
 
-- **Phân biệt mã lỗi:** `CreateInvoiceForPayment` cần trả về lỗi phân biệt được mã lỗi Misa (lỗi có kiểu riêng hoặc sentinel error), thay vì so khớp chuỗi `"MISA invoice creation failed: ..."`. Mã lỗi Misa có thể nằm ở `ErrorCode` của response tổng hoặc ở `PublishInvoiceResult[0].ErrorCode`, nên cần kiểm tra cả hai chỗ.
-- **Chuỗi mã lỗi chính xác:** lấy từ `meta` của các payment transaction lỗi trên production trước khi code.
-- **Retry nên nằm trong khoá,** để lần retry cũng không chạy đồng thời với hoá đơn khác. Thời gian giữ khoá vì thế dài hơn trong case retry, nên cần cân nhắc so với TTL 30 giây.
-- **Phải chắc lần gọi lỗi không để lại hoá đơn ở phía Misa:** mỗi lần gọi `CreateInvoiceForPayment` tạo một `RefID` mới. Nếu khi trả lỗi này Misa vẫn giữ bản nháp hoặc hoá đơn của lần đầu, retry sẽ tạo thêm một bản.
-- **Quan sát:** mỗi case retry đều có tin Lark (bắt đầu retry, thành công hoặc thất bại), và `meta` ghi lại cả hai lần gọi.
+- `CreateInvoiceForPayment` trả lỗi có kiểu riêng khi Misa trả đúng mã `InvoiceNumberNotContinuous`. Lỗi này nhận ra được bằng `errors.Is(err, common.ErrCodeMisaInvoiceNumberNotContinuous)`, còn nội dung lỗi và dòng `meta` vẫn giữ nguyên chuỗi `MISA invoice creation failed: InvoiceNumberNotContinuous`.
+- `meta` của payment transaction ghi lại cả hai lần gọi. Lần retry dùng `RefID` mới.
+- Log theo quy ước: `payment.invoice.retry` (Warn), `payment.invoice.retry_ok` (Info), `payment.invoice.failed` (Error, `reason` là mã lỗi Misa), `payment.fulfillment.failed` (Error, `step` = `publish_invoice`).
 
-Chi phí là thêm phần code retry vào luồng hiện tại, không thêm hạ tầng.
+### Rủi ro còn mở
+
+- **TTL 30 giây phải bao cả hai lần gọi Misa khi có retry.** Bình thường mỗi lần chỉ 1 đến 3 giây. Nhưng khi Misa chậm (thường cũng là lúc dễ gặp lỗi này), cộng thêm việc HTTP client tự retry, khoá có thể hết hạn giữa lần retry và hoá đơn khác chen vào. Hướng xử lý nếu gặp: gia hạn khoá trước khi retry, hoặc đặt TTL dài hơn riêng cho khoá Misa.
+- **Nguy cơ trùng hoá đơn:** retry an toàn nếu khi trả `InvoiceNumberNotContinuous`, Misa không tạo bản ghi nào cho lần gọi đầu. Nếu Misa vẫn giữ bản nháp, retry sẽ tạo thêm một hoá đơn. Cần xác nhận với Misa trước khi lên production.
