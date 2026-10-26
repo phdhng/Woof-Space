@@ -54,6 +54,25 @@ học sinh.
   phía gọi chỉ log, không rollback enroll W0, không retry.
 - Toàn bộ phần W0 chạy sau khi ghi danh chính xong, không nằm trong transaction của ghi danh.
 
+## API retry enroll W0
+
+`POST /v1/cms/registration-request/:request_id/enroll-w0` (ACL `UPDATE_REGISTRATION_STATUS`) chạy lại
+đúng luồng W0 cho 1 ghi danh khi luồng tự động bị lỗi. Chỉ nhận `request_id`; học sinh, lớp ghi danh,
+levels lấy từ registration request; chỉ chạy khi ghi danh ở `IN_PROGRESS` hoặc `ENROLLED`. Chạy đồng bộ,
+kết quả trả thẳng trong response, không gửi Lark. Dành cho dev nội bộ gọi qua Postman nên không
+khoá chống gọi trùng.
+
+- Thành công: thêm học sinh vào W0, gửi email như luồng tự động, trả `{"w0_class_id", "w0_class_title"}`.
+- Lỗi trả 400 kèm mã lỗi: ghi danh chưa có lớp (`registration_request_has_no_class`), trạng thái
+  ghi danh khác `IN_PROGRESS`/`ENROLLED` (`registration_status_not_allowed_for_w0`), lớp ghi danh
+  không phải main (`registration_class_not_main`), ghi danh không đúng 1 level
+  (`registration_request_must_have_one_level`), không có / có nhiều hơn 1 lớp W0 đang mở cho level
+  (`w0_class_not_found` / `w0_class_duplicated`), học sinh đã có lớp W0 của level này
+  (`already_in_w0_class`).
+
+Luồng tự động sau `submit-registration` dùng chung các mã lỗi này; trong đó "lớp không phải main" và
+"đã có W0" chỉ bỏ qua, không gửi Lark.
+
 ## Trước khi deploy
 
 - Tạo template SES `week0-activation` trên stg và prod.
