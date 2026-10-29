@@ -4,9 +4,9 @@ Repo: `app-api`. Task trên YouRa: #1403.
 
 ## Yêu cầu
 
-Khi học sinh ghi danh thành công vào lớp chính (`class.class_category = 'main'`) qua
-`POST /regis/submit-registration`, hệ thống thêm học sinh vào lớp W0 cùng level, sau đó gửi email
-`week0-activation`.
+Khi học sinh ghi danh thành công qua `POST /regis/submit-registration` — vào lớp chính
+(`class.class_category = 'main'`) hoặc vào waiting list (chưa chọn lớp) — hệ thống thêm học sinh vào
+lớp W0 cùng level, sau đó gửi email `week0-activation`.
 
 - Lớp W0: `class.class_category = 'preparation'`. Mỗi level (ROOT/TRUNK/BUD/BLOOM) có đúng 1 lớp
   W0; level của lớp lấy qua `course.level`.
@@ -16,23 +16,24 @@ Khi học sinh ghi danh thành công vào lớp chính (`class.class_category = 
 
 ## Điểm gắn logic
 
-`SubmitRegistration` (`internal/services/crm.go`), sau khi `AssignClassToRegistrationRequest` thành
-công. Nhánh không có `ClassID` (waiting list) không enroll W0.
+`SubmitRegistration` (`internal/services/crm.go`), ở 2 nhánh:
 
-`AssignClassToRegistrationRequest` đã kiểm tra `checkClassLevel`: level của lớp (`course.level`)
-phải nằm trong `registration_request.levels`, nếu `levels` rỗng/null thì ghi danh đã bị từ chối
-(`ErrInvalidClassLevel`). Vì vậy tới bước W0, level của lớp ghi danh luôn là một level hợp lệ của
-học sinh.
+- Có `ClassID`: sau khi `AssignClassToRegistrationRequest` thành công. Hàm này đã kiểm tra
+  `checkClassLevel`: level của lớp (`course.level`) phải nằm trong `registration_request.levels`,
+  nên tới bước W0, level của lớp ghi danh luôn là một level hợp lệ của học sinh.
+- Không có `ClassID` (waiting list): sau khi cập nhật ghi danh sang `WAITING_LIST` thành công.
 
 ## Luồng W0
 
-1. Lớp ghi danh không phải `main` → bỏ qua.
-2. Xác định level ghi danh: `registration_request.levels` phải có đúng 1 phần tử (level đó trùng
-   `course.level` của lớp ghi danh nhờ `checkClassLevel`). Nhiều hơn 1 level → lỗi, không enroll W0.
+1. Có lớp ghi danh nhưng lớp không phải `main` → bỏ qua. Waiting list (chưa có lớp) bỏ qua bước này.
+2. Xác định level theo thứ tự ưu tiên: (1) `course.level` của lớp ghi danh nếu có; (2) không có
+   (gồm cả waiting list) thì lấy `registration_request.levels` nếu có đúng 1 level; (3) vẫn không
+   có → lỗi, không enroll W0.
 3. Tìm lớp `preparation`, `status = published`, có `course.level` = level đó. Không tìm thấy (hoặc tìm thấy hơn 1) → lỗi.
 4. Học sinh đã có dòng trong `class_directus_users_2` của lớp W0 này với `status = 1` và
    `payment_status = 1` → bỏ qua (idempotent, chặn cả trigger lặp). W0 khác level không ảnh hưởng;
-   học sinh đổi sang lớp khác level thì enroll thêm W0 mới, W0 cũ giữ nguyên.
+   học sinh đổi sang lớp khác level thì enroll thêm W0 mới, W0 cũ giữ nguyên. Học sinh vào waiting
+   list (đã có W0) rồi được xếp lớp cùng level thì cũng bỏ qua ở bước này.
 5. Thêm học sinh vào lớp W0 qua `userClassRepo` (giống `EnrollStudentsToClasses`).
 6. Gửi email kích hoạt W0 qua AWS SES, template `week0-activation` (config
    `ielts_84_email.week0_activation_template`), bằng `SendEmailWithTemplateAndSaveTransaction`.
@@ -47,26 +48,30 @@ học sinh.
   `lark_class_management_webhook_url`). Tin nhắn có thể được chuyển tiếp cho EC nên viết tiếng Việt:
   dòng "Lỗi" mô tả lỗi, sau đó danh sách "Thông tin để check lỗi" gồm học sinh (email (id)), link CRM
   ghi danh (`common.URLFormatLinkCRM` + id registration request; domain CRM prod nên link
-  chỉ đúng trên prod), lớp ghi danh (tên (id)), level lớp
+  chỉ đúng trên prod), lớp ghi danh (tên (id), hoặc "chưa có (waiting list)"), level lớp
   ghi danh, levels của ghi danh, lớp W0 (nếu đã tìm thấy).
 - Lỗi gửi email (template chưa có trên SES, SES lỗi...): `SendEmailWithTemplateAndSaveTransaction`
   lưu `email_transaction` trạng thái `Failed` kèm lỗi và gửi Lark (`lark_notification_webhook_url`);
   phía gọi chỉ log, không rollback enroll W0, không retry.
 - Toàn bộ phần W0 chạy sau khi ghi danh chính xong, không nằm trong transaction của ghi danh.
+- Học sinh đang ở waiting list gửi lại ghi danh (vd đổi lịch mong muốn) thì luồng W0 chạy lại: đã có
+  W0 thì bỏ qua; nếu lỗi (vd không xác định được level) thì mỗi lần gửi lại có thêm 1 tin Lark trùng.
 
 ## API retry enroll W0
 
 `POST /v1/cms/registration-request/:request_id/enroll-w0` (ACL `UPDATE_REGISTRATION_STATUS`) chạy lại
 đúng luồng W0 cho 1 ghi danh khi luồng tự động bị lỗi. Chỉ nhận `request_id`; học sinh, lớp ghi danh,
-levels lấy từ registration request; chỉ chạy khi ghi danh ở `IN_PROGRESS` hoặc `ENROLLED`. Chạy đồng bộ,
+levels lấy từ registration request; chỉ chạy khi ghi danh ở `WAITING_LIST`, `IN_PROGRESS` hoặc
+`ENROLLED`. Ghi danh `WAITING_LIST` (hoặc chưa có lớp) chạy như nhánh waiting list, bỏ qua `class_id`
+còn sót trong DB (chuyển sang waiting list không xoá `class_id` của lớp trước). Chạy đồng bộ,
 kết quả trả thẳng trong response, không gửi Lark. Dành cho dev nội bộ gọi qua Postman nên không
 khoá chống gọi trùng.
 
 - Thành công: thêm học sinh vào W0, gửi email như luồng tự động, trả `{"w0_class_id", "w0_class_title"}`.
-- Lỗi trả 400 kèm mã lỗi: ghi danh chưa có lớp (`registration_request_has_no_class`), trạng thái
-  ghi danh khác `IN_PROGRESS`/`ENROLLED` (`registration_status_not_allowed_for_w0`), lớp ghi danh
-  không phải main (`registration_class_not_main`), ghi danh không đúng 1 level
-  (`registration_request_must_have_one_level`), không có / có nhiều hơn 1 lớp W0 đang mở cho level
+- Lỗi trả 400 kèm mã lỗi: trạng thái ghi danh khác `WAITING_LIST`/`IN_PROGRESS`/`ENROLLED`
+  (`registration_status_not_allowed_for_w0`), lớp ghi danh
+  không phải main (`registration_class_not_main`), không xác định được level
+  (`w0_level_not_determined`), không có / có nhiều hơn 1 lớp W0 đang mở cho level
   (`w0_class_not_found` / `w0_class_duplicated`), học sinh đã có lớp W0 của level này
   (`already_in_w0_class`).
 
