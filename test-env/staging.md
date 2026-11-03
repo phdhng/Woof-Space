@@ -1,6 +1,7 @@
 # Test env — staging
 
-Dùng chung cho mọi service: chung 1 DB, chung access_token. Credential ở `test-env/.env.staging`.
+Dùng chung cho mọi service: chung 1 DB, chung access_token. Base URL và tài khoản test ở
+`test-env/.env.staging`; credential DB ở `test-env/.env.dbstaging` (dùng chung với local).
 
 ## Base URL
 
@@ -20,7 +21,12 @@ Mỗi service 1 biến `STAGING_<TÊN_SERVICE>_BASE_URL` trong `.env.staging` (v
 
 ## DB
 
-Postgres dùng chung, biến `STAGING_DB_*`.
+Postgres dùng chung cho cả local và staging, biến `STAGING_DB_*` trong `test-env/.env.dbstaging`. Cần seed/kiểm
+DB thì nạp thêm file này cùng `.env.staging`:
+
+```bash
+set -a; . test-env/.env.staging; . test-env/.env.dbstaging; set +a; <lệnh>
+```
 
 ## Đánh dấu data test
 

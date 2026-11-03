@@ -1,6 +1,7 @@
 # Test env — local
 
-Service chạy trên máy, credential ở `test-env/.env.local`.
+Service chạy trên máy, base URL và tài khoản test ở `test-env/.env.local`; credential DB ở
+`test-env/.env.dbstaging` (DB staging dùng chung).
 
 ## Base URL
 
@@ -14,6 +15,17 @@ thì thêm biến theo mẫu đó.
 - `.env` của app-api hiện trỏ Postgres remote (DB staging dùng chung), không phải DB local. Vì vậy data và tài
   khoản giống staging, và mọi lệnh ghi qua API local cũng ghi vào DB staging: áp dụng quy tắc ghi của staging
   (`.claude/skills/testing-api/staging.md`).
+
+## DB
+
+Local test trên DB staging dùng chung: biến `STAGING_DB_*` trong `test-env/.env.dbstaging`. Cần seed/kiểm DB
+thì nạp thêm file này cùng `.env.local`:
+
+```bash
+set -a; . test-env/.env.local; . test-env/.env.dbstaging; set +a; <lệnh>
+```
+
+Ghi DB (seed, gọi API ghi) theo quy tắc ghi của staging: test plan duyệt trước, change log, rollback theo id.
 
 ## Login
 
