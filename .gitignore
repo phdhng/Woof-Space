@@ -9,3 +9,5 @@ epics/*/repos/*
 orphan-tasks/*/repos/*
 !orphan-tasks/*/repos/README.md
 .env
+test-env/.env.*
+jean-snapshot-*.patch
